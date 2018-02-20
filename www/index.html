@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			Bingo 
+		</title>
+			<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover' /> 
+
+		<link href="css/style.css" rel="stylesheet" type="text/css"> 
+		<script src="js/jquery.js" type="text/javascript">
+		</script>
+		<script src="js/jquery.tappable.js" type="text/javascript">
+		</script>
+		<script src="js/data.js" type="text/javascript">
+		</script>
+		<script src="js/script.js" type="text/javascript">
+		</script>
+		<link rel="stylesheet" href="css/bootstrap.min.css"> 
+		<script type="text/javascript" src="cordova.js">
+		</script>
+		<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> <link href="https://fonts.googleapis.com/css?family=Montserrat|Nanum+Brush+Script" rel="stylesheet"> 
+	</head>
+	<body>
+
+		<div id="main" class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="header">
+					</div>
+				</div>
+			</div>
+
+				<div class="row" ">
+					<div class="col-md-12">
+						<div class="flip-container" id="boardRow">
+							<div class="flipper">
+								<div id="board" class="front"></div>
+								<div id="positiveboard" class="back"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</div>
+		
+<footer class="footer">
+<div class="container">
+			<div class="row">
+				<div class="col-xs-3 text-center">
+					<button type="button" class="btn btn-info" onclick="HashTagLoad()">
+						Hashtag 
+					</button>
+				</div>
+				<div class="col-xs-3 text-center">
+					<button type="button" class="btn btn-info" onclick="window.location.reload(true);">
+						New Cards 
+					</button>
+				</div>
+				<div class="col-xs-3 text-center">
+					<button type="button" class="btn btn-info" onclick="FlipBoard()">
+						Flip Board 
+					</button>
+				</div>
+				<div class="col-xs-3 text-center">
+					<button type="button" class="btn btn-info" onclick="LoadTweet()">
+						Share move 
+					</button>
+				</dv>
+<!-- 
+<button onclick="window.plugins.socialsharing.shareViaTwitter('square')">Tweet your Move!</button>
+ -->
+			</div>
+		</div>
+		</div>
+	</footer>
+	<script>
+		document.addEventListener("deviceready", onDeviceReady, false);
+		function onDeviceReady() {
+		    console.log(navigator.notification);
+		}
+		
+		 $('body').on('click', '.square', function(e) 
+		 {
+		            msg = document.getElementById(e.target.id).getElementsByClassName('text')[0].innerHTML;
+		            msg = msg.substring(4);
+		            console.log('here:'+msg);
+		            
+		            
+		});
+				 $('body').on('click', '.squarePLUS', function(e) 
+		 {
+		            msg = document.getElementById(e.target.id).getElementsByClassName('text')[0].innerHTML;
+		            msg = msg.substring(4);
+		            console.log('herePLUS:'+msg);
+		            
+		            
+		});
+		// <button onclick="GetMsg(tweet);window.plugins.socialsharing.shareViaTwitter('Message and link via Twitter', null /* img */, 'http://www.x-services.nl')">msg and link via Twitter</button>
+	</script>
+</body>
+</html>

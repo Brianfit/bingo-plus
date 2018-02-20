@@ -1,0 +1,320 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+html {	  position: relative;   min-height: 100%;}
+
+body {
+	background-color: #285979 !important;
+	font-family: 'Nanum Brush Script', cursive;
+/* 	margin bottom must equal footer height */
+    margin-bottom: 80px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here and in body margin bottom */
+  height: 80px;
+/* 
+	margin-bottom: 10px; 
+	margin-bottom: constant(safe-area-inset-bottom);
+    margin-bottom: env(safe-area-inset-bottom);
+ */
+
+  }
+
+
+p {
+font-family: 'Nanum Brush Script', cursive;
+font-size: x-small;
+font-weight: bold;
+line-height: 90%;
+}
+
+.btn {
+font-family: 'Nanum Brush Script', cursive;
+border: 2px solid white;
+font-size: small;
+color: white;
+font-weight: bold;
+line-height: 90%;
+}
+
+#container {
+	background-color: #285979;
+}	
+
+
+#header, #footerblock {
+	display: block;
+	float: left;
+	width: 100%;
+	color: white;
+/* 	opacity: 0.5; */
+/* 	text-shadow: 0px 1px 0px #e1e1e1, 0px -1px 0px #313131; */
+   	background-color: #50CAF1;
+   	font-family: 'Nanum Brush Script', cursive;
+	font-size: large;
+	line-height: normal;
+	font-weight: bold;
+	padding: 4px 10px 4px 10px;
+	transition-property: background-color;
+	transition-duration: 1s;
+	-moz-transition-property: background-color;
+	-moz-transition-duration: 1s;
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 1s;
+}
+
+
+#footerblock {
+	text-align: center;
+	font-size: large;
+
+}
+
+#footerblock a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#quote {color: white;
+font-size: normal;}
+
+#board {
+	display: block;
+	float: left;
+	width: 100%;
+	background-color: #60C3E3;
+	margin-bottom: 10px;
+	box-shadow: 0px 3px #FFC800;
+}
+
+#positiveboard {
+	display: block;
+	float: left;
+	width: 100%;
+	background-color: pink;
+	margin-bottom: 10px;
+	box-shadow: 0px 3px #FFC800;
+}
+
+
+
+.square, .freesquare {
+	display: block;
+	float: left;
+	overflow: hidden;
+	background-color: #8DC6E4;
+	color: black;
+	text-align: center;
+	width:  calc(100%  / 5 );
+ 	height: 80px;
+	padding: 4px 4px 4px 4px;
+	border: 1px solid white;
+	transition-property: background-color;
+	transition-duration: 1s;
+	-moz-transition-property: background-color;
+	-moz-transition-duration: 1s;
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 1s;
+}
+
+.squarePLUS, .freesquarePLUS {
+	display: block;
+	float: left;
+	overflow: hidden;
+	background-color: pink;
+	color: black;
+	text-align: center;
+	width:  calc(100%  / 5 );
+ 	height: 80px;
+	padding: 4px 4px 4px 4px;
+	border: 1px solid black;
+	transition-property: background-color;
+	transition-duration: 1s;
+	-moz-transition-property: background-color;
+	-moz-transition-duration: 1s;
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 1s;
+}
+
+.maincontainer {
+margin-top: 15px;
+}
+
+.selected {
+	color: #f1f1f1;
+	background-color: #313131;
+}
+
+.text {
+	vertical-align: middle;
+
+}
+
+/* iphone 5 */
+@media screen and (device-aspect-ratio: 40/71) {
+ body {
+    font-size: 12px !important;
+
+    }
+    p, .btn,.text { font-size: x-small !important;}
+   .square, .freesquare {height: 60px;}
+}
+}
+@media (min-width: 640px) {   
+    body {
+    font-size: 12px !important;
+
+
+
+    }
+    p, .btn,.text { font-size: x
+    -small !important; }
+   .square, .freesquare {height: 60px;}
+}
+
+@media (min-width: 768px) {   
+    body {
+    font-size: 20px !important;
+
+
+
+    }
+    p, .btn,.text { font-size: normal !important; }
+   .square, .freesquare {height: 90px;}
+}
+
+/* all ipads */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+body {
+    font-size: 20px;
+/*     color: blue; */
+
+
+
+    }
+       .square, .freesquare {height: 120px;} 
+    p, .btn,.text { font-size: x-large !important; }   
+    .maincontainer {margin-top: 60px;}        
+}
+
+/* Big screen */
+@media (min-width: 1200px) {
+        body {
+     margin-top: 40px;   
+    font-size: 22px;
+
+    }
+            p, .btn,.text { font-size: xx-large !important;}
+           .square, .freesquare {height: 150px;}
+}
+
+
+
+.win {
+	color: #ffffff !important;
+   	background-color: red;
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+
+	#header {
+		text-align: center;
+		padding: 20px 20px 12px 20px;
+/* 		background-color: #FFBF00; */
+	}
+	
+	#footerblock {	
+		padding: 16px 20px 8px 20px;
+	}
+
+
+}
+
+.hyphens {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
+.flip-container {
+    -webkit-perspective: body.css(width);
+	-moz-perspective: body.css(width);
+	perspective: body.css(width);
+}
+
+
+.flip-container.flip .flipper {
+
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+		filter: FlipH;
+    	-ms-filter: "FlipH";
+
+}
+
+
+.flip-container, .front, .back {
+	width: #board.css(width);
+	height: #board.css(height);
+}
+
+/* flip speed goes here */
+.flipper {
+	-webkit-transition: 0.6s;
+			-webkit-transform-style: preserve-3d;
+
+			-moz-transition: 0.6s;
+			-moz-transform-style: preserve-3d;
+
+			transition: 0.6s;
+			transform-style: preserve-3d;
+
+			position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+ -webkit-backface-visibility: hidden;
+         backface-visibility: hidden;
+ -webkit-transition: 0.6s;
+         transition: 0.6s;
+ -webkit-transform-style: preserve-3d;
+         transform-style: preserve-3d;
+ position: absolute;
+ top: 0;
+ left: 0;
+
+	
+}
+
+/* front pane, placed above back */
+.front {
+ z-index: 2;
+ -webkit-transform: rotateY(0deg);
+         transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+ -webkit-transform: rotateY(-180deg);
+         transform: rotateY(-180deg);
+}
