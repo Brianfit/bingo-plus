@@ -7,19 +7,22 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
+    },
     "cordova-plugin-screen-orientation": {
       "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
     },
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
     },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
+    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
     },
     "cordova-plugin-x-socialsharing": {
-      "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
-    },
-    "cordova-plugin-dialogs": {
       "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
     }
   },

@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="net.brian-fitzgerald.bingo" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Ocean Conference Sexist Bingo</name>
+<widget id="net.brian-fitzgerald.bingo" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Gender Balance this Ocean Conference Bingo</name>
     <description>
         A Bingo Game where Everyone Loses
     </description>
@@ -19,10 +19,14 @@
         <allow-intent href="market:*" />
     </platform>
     <platform name="ios">
+        <feature name="StatusBar">
+            <param name="ios-package" onload="true" value="CDVStatusBar" />
+        </feature>
+        <preference name="StatusBarOverlaysWebView" value="false" />
+        <preference name="StatusBarBackgroundColor" value="#000000" />
+        <preference name="StatusBarStyle" value="lightcontent" />
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
-    </platform>
-    <platform name="ios">
         <preference name="Orientation" value="Portrait" />
         <splash src="res/screen/ios/Default@2x~universal~anyany.png" />
     </platform>
@@ -43,8 +47,9 @@
     <plugin name="cordova-plugin-whitelist" spec="1" />
     <plugin name="cordova-plugin-screen-orientation" spec="~3.0.1" />
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
-    <plugin name="cordova-plugin-x-socialsharing" spec="^5.2.1" />
+    <plugin name="cordova-plugin-x-socialsharing" spec="~5.2.1" />
     <plugin name="cordova-plugin-dialogs" spec="^2.0.1" />
+    <plugin name="cordova-plugin-statusbar" spec="~2.4.1" />
     <engine name="android" spec="^7.0.0" />
-    <engine name="ios" spec="^4.5.4" />
+    <engine name="ios" spec="~4.5.4" />
 </widget>

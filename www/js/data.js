@@ -1,13 +1,17 @@
 
-var headerText = "Sexist Ocean Conference Bingo";
+var headerText = "Gender Balance This Oceans Conference Bingo";
 
 var footerText = "A beautiful mischief app from <br /><a href='http://women4oceans.weebly.com/'><img src='img/logo.png' width='25px' height='25px'>Women4oceans</a> and <a href='http://www.dancing-fox.com'><img src='img/df-logo.png' width='25px' height='25px'> Dancing Fox</a>";
 
-var winText = "Everyone loses";
+var winText = "Everyone WINS!";
+
+var loseText = "Everyone loses..."
 
 var clickSnd = new Audio("audio/click.mp3");
 
 var winSnd = new Audio("audio/win.mp3");
+
+var loseSnd = new Audio("audio/lose.mp3");
 
 var hashtag = "#OceansConference";
 
@@ -55,30 +59,30 @@ var JSONBingoPLUS = {"squaresPLUS": [
         {"squarePLUS": "Woman called upon"},
         {"squarePLUS": "Woman gets applause"},
         {"squarePLUS": "Neutral pronoun"},
-        {"squarePLUS": "XXXXX"},
-        {"squarePLUS": "ZZZZZ"},
-        {"squarePLUS": "YYYY"},
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"}, 
-        {"squarePLUS": "Plus Card"} 
+        {"squarePLUS": "Diversity mentioned"},
+        {"squarePLUS": "Call for equality"},
+        {"squarePLUS": "Impact on women cited"},
+        {"squarePLUS": "Eye contact"}, 
+        {"squarePLUS": "Gender diverse audience"}, 
+        {"squarePLUS": "Culturally diverse audience"}, 
+        {"squarePLUS": "Not one White European Man on panel"}, 
+        {"squarePLUS": "Example of powerful woman cited"}, 
+        {"squarePLUS": "Feeling safe"}, 
+        {"squarePLUS": "Sense of sisterhood"}, 
+        {"squarePLUS": "Sensitive Male"}, 
+        {"squarePLUS": "Transgender bathroom"}, 
+        {"squarePLUS": "Feminism mentioned"}, 
+        {"squarePLUS": "Effort toward gender balance"}, 
+        {"squarePLUS": "Inclusive agenda"}, 
+        {"squarePLUS": "Gender balance raised by male"}, 
+        {"squarePLUS": "FisherFOLK"}, 
+        {"squarePLUS": "Moderator treats panelists equally"}, 
+        {"squarePLUS": "Microphone given to woman"}, 
+        {"squarePLUS": "Inclusive language"}, 
+        {"squarePLUS": "Woman's leadership celebrated"}, 
+        {"squarePLUS": "Woman's professional expertise sought"}, 
+        {"squarePLUS": "Infant in the room"}, 
+        {"squarePLUS": "Breast feeding woman? No problem"}, 
+        {"squarePLUS": "Healthy airing of issues"} 
     ]    
 };

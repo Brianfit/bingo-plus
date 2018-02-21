@@ -64,7 +64,7 @@ line-height: 90%;
 /* 	text-shadow: 0px 1px 0px #e1e1e1, 0px -1px 0px #313131; */
    	background-color: #50CAF1;
    	font-family: 'Nanum Brush Script', cursive;
-	font-size: large;
+	font-size: xx-large;
 	line-height: normal;
 	font-weight: bold;
 	padding: 4px 10px 4px 10px;
@@ -74,6 +74,10 @@ line-height: 90%;
 	-moz-transition-duration: 1s;
 	-webkit-transition-property: background-color;
 	-webkit-transition-duration: 1s;
+}
+
+#header {
+font-effect: font-effect-shadow-multiple;
 }
 
 
@@ -170,7 +174,8 @@ margin-top: 15px;
 
     }
     p, .btn,.text { font-size: x-small !important;}
-   .square, .freesquare {height: 60px;}
+   .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 60px;}
+   #header {font-size: normal}
 }
 }
 @media (min-width: 640px) {   
@@ -182,7 +187,8 @@ margin-top: 15px;
     }
     p, .btn,.text { font-size: x
     -small !important; }
-   .square, .freesquare {height: 60px;}
+   .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 60px;}
+    #header {font-size: normal}
 }
 
 @media (min-width: 768px) {   
@@ -193,7 +199,8 @@ margin-top: 15px;
 
     }
     p, .btn,.text { font-size: normal !important; }
-   .square, .freesquare {height: 90px;}
+   .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 90px;}
+    #header {font-size: large}
 }
 
 /* all ipads */
@@ -207,7 +214,7 @@ body {
 
 
     }
-       .square, .freesquare {height: 120px;} 
+       .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 120px;} 
     p, .btn,.text { font-size: x-large !important; }   
     .maincontainer {margin-top: 60px;}        
 }
@@ -220,14 +227,19 @@ body {
 
     }
             p, .btn,.text { font-size: xx-large !important;}
-           .square, .freesquare {height: 150px;}
+           .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 150px;}
 }
 
 
 
+.lose {
+	color: #ffffff !important;
+   	background-color: red !important;
+}
+
 .win {
 	color: #ffffff !important;
-   	background-color: red;
+   	background-color: purple !important;
 }
 
 @media only screen 

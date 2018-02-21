@@ -1,3 +1,11 @@
+// To Do:
+// Get StatusBar working
+// Localize fonts
+// Replace header, win, and loss, with images
+// Add tiles
+// Build About page
+
+
 var GetMsg = function() {
 console.log('GetMsg '+msg);
     return msg;
@@ -24,11 +32,15 @@ console.log('attempting flip');
 document.querySelector("#boardRow").classList.toggle("flip");
 }  
 
+var GiveBack = function(){
+location.href = "https://donorbox.org/women4oceans";
+
+}
 
 
 var LoadTweet = function() {
 var tweet = GetMsg();
-window.plugins.socialsharing.share('I\'m at '+hashtag+' playing Sexist Oceans Conference Bingo. Ticking the box for \''+ tweet+'\'', 'Sexist Oceans Conference bingo', 'http://women4oceans.weebly.com/uploads/1/2/1/3/12139956/website1_orig.png', 'http://www.women4oceans.weebly.com')
+window.plugins.socialsharing.share('I\'m at '+hashtag+' playing '+headerText+'. Ticking the box for \''+ tweet+'\'', headerText, 'http://women4oceans.weebly.com/uploads/1/2/1/3/12139956/website1_orig.png', 'http://www.women4oceans.weebly.com')
 }
 
 
@@ -103,14 +115,14 @@ for (i=0; i<24; i++)	{
 		var diag2 = ($('#sq4').data('value')+$('#sq8').data('value')+$('#sqfree').data('value')+$('#sq15').data('value')+$('#sq19').data('value'));	
 		
 		if (row1 == 5 || row2 == 5 || row3 == 5 || row4 == 5 || row5 == 5 || col1 == 5 || col2 == 5 || col3 == 5  || col4 == 5  || col5 == 5 || diag1 == 5 || diag2 == 5) {
-			$('#header').html(winText);
-			$('#header').addClass("win");
+			$('#header').html(loseText);
+			$('#header').addClass("lose");
 	
-         	winSnd.play();
+         	loseSnd.play();
     		
     	} else {
 			$('#header').html(headerText);
-			$('#header').removeClass("win");
+			$('#header').removeClass("lose");
 
 		}; 
     });

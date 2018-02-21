@@ -45,6 +45,14 @@ module.exports = [
     "merges": [
       "navigator.notification"
     ]
+  },
+  {
+    "id": "cordova-plugin-statusbar.statusbar",
+    "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
+    "pluginId": "cordova-plugin-statusbar",
+    "clobbers": [
+      "window.StatusBar"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -55,7 +63,8 @@ module.exports.metadata =
   "cordova-plugin-screen-orientation": "3.0.1",
   "cordova-plugin-splashscreen": "5.0.2",
   "cordova-plugin-x-socialsharing": "5.2.1",
-  "cordova-plugin-dialogs": "2.0.1"
+  "cordova-plugin-dialogs": "2.0.1",
+  "cordova-plugin-statusbar": "2.4.1"
 };
 // BOTTOM OF METADATA
 });
