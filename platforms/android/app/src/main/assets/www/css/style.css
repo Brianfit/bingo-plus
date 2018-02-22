@@ -10,13 +10,29 @@
 	user-select: none;
 }
 
+html {	  position: relative;   min-height: 100%;}
+
 body {
 	background-color: #285979 !important;
 	font-family: 'Nanum Brush Script', cursive;
-/* 	background-image: url('../img/ocean.jpg'); */
-	/* font-family: 'Montserrat', sans-serif; */
-/* 	text-rendering: optimizeLegibility; */
+/* 	margin bottom must equal footer height */
+    margin-bottom: 80px;
 }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here and in body margin bottom */
+  height: 80px;
+/* 
+	margin-bottom: 10px; 
+	margin-bottom: constant(safe-area-inset-bottom);
+    margin-bottom: env(safe-area-inset-bottom);
+ */
+
+  }
+
 
 p {
 font-family: 'Nanum Brush Script', cursive;
@@ -39,7 +55,7 @@ line-height: 90%;
 }	
 
 
-#header, #footer {
+#header, #footerblock {
 	display: block;
 	float: left;
 	width: 100%;
@@ -48,7 +64,7 @@ line-height: 90%;
 /* 	text-shadow: 0px 1px 0px #e1e1e1, 0px -1px 0px #313131; */
    	background-color: #50CAF1;
    	font-family: 'Nanum Brush Script', cursive;
-	font-size: large;
+	font-size: xx-large;
 	line-height: normal;
 	font-weight: bold;
 	padding: 4px 10px 4px 10px;
@@ -60,16 +76,18 @@ line-height: 90%;
 	-webkit-transition-duration: 1s;
 }
 
-#footer {
-	text-align: center;
-	font-size: large;
-/* 
-	padding: 3px 20px;
-	margin-bottom: 80px;
- */
+#header {
+background-color: #9ad9d8
 }
 
-#footer a {
+
+#footerblock {
+	text-align: center;
+	font-size: large;
+
+}
+
+#footerblock a {
 	text-decoration: none;
 	color: #fff;
 }
@@ -86,20 +104,16 @@ font-size: normal;}
 	box-shadow: 0px 3px #FFC800;
 }
 
-.noselect { 
--webkit-touch-callout: none; 
-/* iOS Safari */ 
--webkit-user-select: none; 
-/* Chrome/Safari/Opera */ 
--khtml-user-select: none; 
-/* Konqueror */ 
--moz-user-select: none; 
-/* Firefox */ 
--ms-user-select: none; 
-/* Internet Explorer/Edge */ 
-user-select: none; 
-/* Non-prefixed version, currently not supported by any browser */ 
+#positiveboard {
+	display: block;
+	float: left;
+	width: 100%;
+	background-color: pink;
+	margin-bottom: 10px;
+	box-shadow: 0px 3px #FFC800;
 }
+
+
 
 .square, .freesquare {
 	display: block;
@@ -120,6 +134,25 @@ user-select: none;
 	-webkit-transition-duration: 1s;
 }
 
+.squarePLUS, .freesquarePLUS {
+	display: block;
+	float: left;
+	overflow: hidden;
+	background-color: pink;
+	color: black;
+	text-align: center;
+	width:  calc(100%  / 5 );
+ 	height: 80px;
+	padding: 4px 4px 4px 4px;
+	border: 1px solid black;
+	transition-property: background-color;
+	transition-duration: 1s;
+	-moz-transition-property: background-color;
+	-moz-transition-duration: 1s;
+	-webkit-transition-property: background-color;
+	-webkit-transition-duration: 1s;
+}
+
 .maincontainer {
 margin-top: 15px;
 }
@@ -131,10 +164,7 @@ margin-top: 15px;
 
 .text {
 	vertical-align: middle;
-/* 
-	font-size: 1em;
-	line-height: 1em;
- */
+
 }
 
 /* iphone 5 */
@@ -144,7 +174,8 @@ margin-top: 15px;
 
     }
     p, .btn,.text { font-size: x-small !important;}
-   .square, .freesquare {height: 60px;}
+   .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 60px;}
+   #header {font-size: normal}
 }
 }
 @media (min-width: 640px) {   
@@ -154,8 +185,10 @@ margin-top: 15px;
 
 
     }
-    p, .btn,.text { font-size: x-small !important; }
-   .square, .freesquare {height: 60px;}
+    p, .btn,.text { font-size: x
+    -small !important; }
+   .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 60px;}
+    #header {font-size: normal}
 }
 
 @media (min-width: 768px) {   
@@ -166,7 +199,8 @@ margin-top: 15px;
 
     }
     p, .btn,.text { font-size: normal !important; }
-   .square, .freesquare {height: 90px;}
+   .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 90px;}
+    #header {font-size: large}
 }
 
 /* all ipads */
@@ -180,12 +214,12 @@ body {
 
 
     }
-       .square, .freesquare {height: 120px;} 
+       .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 120px;} 
     p, .btn,.text { font-size: x-large !important; }   
     .maincontainer {margin-top: 60px;}        
 }
 
-/* Impossible big screen */
+/* Big screen */
 @media (min-width: 1200px) {
         body {
      margin-top: 40px;   
@@ -193,26 +227,24 @@ body {
 
     }
             p, .btn,.text { font-size: xx-large !important;}
-           .square, .freesquare {height: 150px;}
+           .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 150px;}
 }
 
 
 
+.lose {
+	color: #ffffff !important;
+   	background-color: red !important;
+}
+
 .win {
 	color: #ffffff !important;
-   	background-color: red;
+   	background-color: purple !important;
 }
 
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
-
-/* 
-	#container {
-		width: 640;
-		margin: -7px 0px 0px -7px;
-	}
- */
 
 	#header {
 		text-align: center;
@@ -220,16 +252,11 @@ and (max-device-width : 480px) {
 /* 		background-color: #FFBF00; */
 	}
 	
-	#footer {	
+	#footerblock {	
 		padding: 16px 20px 8px 20px;
 	}
 
-	.text {
-/* 
-		font-size: 1.2em;
-		line-height: 1.2em;
- */
-	}
+
 }
 
 .hyphens {
@@ -237,4 +264,69 @@ and (max-device-width : 480px) {
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
+}
+
+.flip-container {
+    -webkit-perspective: body.css(width);
+	-moz-perspective: body.css(width);
+	perspective: body.css(width);
+}
+
+
+.flip-container.flip .flipper {
+
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+		filter: FlipH;
+    	-ms-filter: "FlipH";
+
+}
+
+
+.flip-container, .front, .back {
+	width: #board.css(width);
+	height: #board.css(height);
+}
+
+/* flip speed goes here */
+.flipper {
+	-webkit-transition: 0.6s;
+			-webkit-transform-style: preserve-3d;
+
+			-moz-transition: 0.6s;
+			-moz-transform-style: preserve-3d;
+
+			transition: 0.6s;
+			transform-style: preserve-3d;
+
+			position: relative;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+ -webkit-backface-visibility: hidden;
+         backface-visibility: hidden;
+ -webkit-transition: 0.6s;
+         transition: 0.6s;
+ -webkit-transform-style: preserve-3d;
+         transform-style: preserve-3d;
+ position: absolute;
+ top: 0;
+ left: 0;
+
+	
+}
+
+/* front pane, placed above back */
+.front {
+ z-index: 2;
+ -webkit-transform: rotateY(0deg);
+         transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+ -webkit-transform: rotateY(-180deg);
+         transform: rotateY(-180deg);
 }

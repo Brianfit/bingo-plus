@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.brian_fitzgerald.bingo"
+    package="net.brianfitzgerald.bingo"
     android:hardwareAccelerated="true"
-    android:versionCode="10000"
-    android:versionName="1.0.0" >
+    android:versionCode="10004"
+    android:versionName="1.0.4" >
 
     <uses-sdk
         android:minSdkVersion="16"
@@ -26,10 +26,11 @@
         android:label="@string/app_name"
         android:supportsRtl="true" >
         <activity
-            android:name="net.brian_fitzgerald.bingo.MainActivity"
+            android:name="net.brianfitzgerald.bingo.MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale"
             android:label="@string/activity_name"
             android:launchMode="singleTop"
+            android:screenOrientation="portrait"
             android:theme="@android:style/Theme.DeviceDefault.NoActionBar"
             android:windowSoftInputMode="adjustResize" >
             <intent-filter android:label="@string/launcher_name" >
@@ -41,7 +42,7 @@
 
         <provider
             android:name="nl.xservices.plugins.FileProvider"
-            android:authorities="net.brian_fitzgerald.bingo.sharing.provider"
+            android:authorities="net.brianfitzgerald.bingo.sharing.provider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
