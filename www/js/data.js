@@ -6,6 +6,8 @@ var footerText = "A beautiful mischief app from <br /><a href='http://women4ocea
 
 var winText = "Everyone WINS!";
 
+var BottomMenu ="<div class='container footer'><div class='row'><div class='col-xs-3 text-center'><button type='button' class='btn btn-info' onclick='HashTagLoad()'>Hashtag</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info' onclick='window.location.reload(true);'>New Cards</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info' onclick='FlipBoard()'>Flip Board</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info' onclick='LoadTweet()'>Share move</button></dv></div></div><div class='row'><div class='col-md-12 text-center'><p style='color:white'><a href=''> About </a> <a href='http://women4oceans.weebly.com/'> <img src='img/logo.png' height='50px' width='50px'> </a> <a href='https://donorbox.org/women4oceans'> Give </a></p></div><div></div></div></div>";
+
 var loseText = "Everyone loses..."
 
 var clickSnd = new Audio("audio/click.mp3");

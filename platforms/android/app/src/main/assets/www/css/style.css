@@ -10,21 +10,26 @@
 	user-select: none;
 }
 
-html {	  position: relative;   min-height: 100%;}
+html {	position: relative; 
+     min-height: 100%;  }
 
 body {
 	background-color: #285979 !important;
 	font-family: 'Nanum Brush Script', cursive;
 /* 	margin bottom must equal footer height */
     margin-bottom: 80px;
+
 }
 
 .footer {
+/* 
   position: absolute;
   bottom: 0;
+ */
   width: 100%;
   /* Set the fixed height of the footer here and in body margin bottom */
   height: 80px;
+
 /* 
 	margin-bottom: 10px; 
 	margin-bottom: constant(safe-area-inset-bottom);
@@ -32,22 +37,31 @@ body {
  */
 
   }
+  
+@font-face {
+  font-family: 'Nanum Pen Script';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Nanum.woff2') format('woff2');  
 
+
+}
 
 p {
-font-family: 'Nanum Brush Script', cursive;
+font-family: 'Nanum Pen Script', cursive;
 font-size: x-small;
 font-weight: bold;
 line-height: 90%;
 }
 
-.btn {
-font-family: 'Nanum Brush Script', cursive;
+.btn-info {
+font-family: 'Nanum Pen Script', cursive;
 border: 2px solid white;
 font-size: small;
 color: white;
 font-weight: bold;
 line-height: 90%;
+background-color: black !important;
 }
 
 #container {
@@ -137,7 +151,7 @@ font-size: normal;}
 .squarePLUS, .freesquarePLUS {
 	display: block;
 	float: left;
-	overflow: hidden;
+/* 	overflow: hidden; */
 	background-color: pink;
 	color: black;
 	text-align: center;

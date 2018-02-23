@@ -6,59 +6,6 @@
 // Build About page
 
 
-var GetMsg = function() {
-// console.log('GetMsg '+msg);
-    return msg;
-  }
-  
-function onPrompt(results) {
-    hashtag = results.input1;
-}
-
-
-var HashTagLoad = function() {
-// console.log('here');
-navigator.notification.prompt(
-    'Conference Hashtag',  // message
-    onPrompt,                  // callback to invoke
-    'Hashtag Setup',            // title
-    ['Ok','Exit'],             // buttonLabels
-    '#OceanConference'                 // defaultText
-)  
-  }
-  
-var FlipBoard = function(){
-// console.log('attempting flip');
-document.querySelector("#boardRow").classList.toggle("flip");
-}  
-
-var GiveBack = function(){
-location.href = "https://donorbox.org/women4oceans";
-
-}
-
-var onLoad = function() {
-    document.addEventListener("deviceready", onDeviceReady, false);
-}
-
-// device APIs are available
-//
-var onDeviceReady = function() {
-            console.log('Ready');
-		    console.log(navigator.notification);
-		    StatusBar.overlaysWebView(true);
-		    StatusBar.styleDefault();
-		}
-    // Add similar listeners for other events
-}
-
-
-var LoadTweet = function() {
-var tweet = GetMsg();
-window.plugins.socialsharing.share('I\'m at '+hashtag+' playing '+headerText+'. Ticking the box for \''+ tweet+'\'', headerText, 'http://women4oceans.weebly.com/uploads/1/2/1/3/12139956/website1_orig.png', 'http://www.women4oceans.weebly.com')
-}
-
-
 $(document).ready(function() {
 	
 	$('body').on('touchmove', false);
@@ -80,20 +27,23 @@ $(document).ready(function() {
 		}
 		
   }
+
+$('#board').append(BottomMenu);
   
 shuffle(JSONBingoPLUS.squaresPLUS);  
 
 for (i=0; i<24; i++)	{
 	
 		if (i==12) {
-			$('#positiveboard').append("<div data-value='1' class='selected freesquarePLUS' id='sqfreePLUS'><p class='text hyphens noselect'><br/>free space</p></div>");
-			$('#positiveboard').append("<div data-value='0' class='squarePLUS' id='sqp12'><p class='text hyphens noselect'><br/>"+JSONBingoPLUS.squaresPLUS[i].squarePLUS+"</p></div>");
+			$('#positiveboard').append("<div data-valuePLUS='1' class='selected freesquarePLUS' id='sqfreePLUS'><p class='text hyphens noselect'><br/>free space</p></div>");
+			$('#positiveboard').append("<div data-valuePLUS='0' class='squarePLUS' id='sqp12'><p class='text hyphens noselect'><br/>"+JSONBingoPLUS.squaresPLUS[i].squarePLUS+"</p></div>");
 		} else {
-			$('#positiveboard').append("<div data-value='0' class='squarePLUS' id='sqp"+i+"'><p class='text hyphens noselect'><br/>"+JSONBingoPLUS.squaresPLUS[i].squarePLUS+"</p></div>");
+			$('#positiveboard').append("<div data-valuePLUS='0' class='squarePLUS' id='sqp"+i+"'><p class='text hyphens noselect'><br/>"+JSONBingoPLUS.squaresPLUS[i].squarePLUS+"</p></div>");
 		}
 		
   }
   
+$('#positiveboard').append(BottomMenu);
 
 	$('div.square').tappable(function ()  {
 	   cancelOnMove: false;
@@ -200,6 +150,60 @@ shuffle = function(v){
     	for(var j, x, i = v.length; i; j = parseInt(Math.random() * i), x = v[--i], v[i] = v[j], v[j] = x);
     	return v;
 };
+
+
+var GetMsg = function() {
+// console.log('GetMsg '+msg);
+    return msg;
+  }
+  
+function onPrompt(results) {
+    hashtag = results.input1;
+}
+
+
+var HashTagLoad = function() {
+// console.log('here');
+navigator.notification.prompt(
+    'Conference Hashtag',  // message
+    onPrompt,                  // callback to invoke
+    'Hashtag Setup',            // title
+    ['Ok','Exit'],             // buttonLabels
+    '#OceanConference'                 // defaultText
+)  
+  }
+  
+var FlipBoard = function(){
+// console.log('attempting flip');
+document.querySelector("#boardRow").classList.toggle("flip");
+}  
+
+var GiveBack = function(){
+location.href = "https://donorbox.org/women4oceans";
+
+}
+
+var onLoad = function() {
+    document.addEventListener("deviceready", onDeviceReady, false);
+}
+
+// device APIs are available
+//
+var onDeviceReady = function() {
+            console.log('Ready');
+		    console.log(navigator.notification);
+		    StatusBar.overlaysWebView(true);
+		    StatusBar.styleDefault();
+		}
+ 
+
+
+var LoadTweet = function() {
+var tweet = GetMsg();
+window.plugins.socialsharing.share('I\'m at '+hashtag+' playing '+headerText+'. Ticking the box for \''+ tweet+'\'', headerText, 'http://women4oceans.weebly.com/uploads/1/2/1/3/12139956/website1_orig.png', 'http://www.women4oceans.weebly.com')
+}
+
+
 
 /*! Normalized address bar hiding for iOS & Android (c) @scottjehl MIT License */
 // (function( win ){
