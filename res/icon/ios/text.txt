@@ -1,5 +1,0 @@
-icon-57-2x.png
-icon-57.png
-icon-72-2x.png
-icon-72.png
-text.txt

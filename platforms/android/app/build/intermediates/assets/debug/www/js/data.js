@@ -20,7 +20,7 @@ var hashtag = "#OceansConference";
 
 var idstring = "sq11";
 
-var msg = "I'm playing Sexist Oceans Conference Bingo"
+var msg = "I'm playing Gender Equality Conference Bingo"
 
 var JSONBingo = {"squares": [
         {"square": "No women on the panel"},
@@ -55,6 +55,41 @@ var JSONBingo = {"squares": [
         {"square": "Leering"}    	
     ]
     };
+
+
+// var JSONBingo = {"squares": [
+//         {"square": "<img src='img/2.png' class='img-responsive'>"},
+//         {"square": "<img src='img/1.png' class='img-responsive'>"},
+//         {"square": "<img src='img/1.png' class='img-responsive'>"},
+//         {"square": "<img src='img/1.png' class='img-responsive'>"},
+//         {"square": "<img src='img/1.png' class='img-responsive'>"},
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
+//         {"square":  "<img src='img/1.png' class='img-responsive'>"}
+//     ]
+//     };
     
 var JSONBingoPLUS = {"squaresPLUS": [
         {"squarePLUS": "All women panel"},

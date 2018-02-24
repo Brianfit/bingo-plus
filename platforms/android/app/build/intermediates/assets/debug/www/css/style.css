@@ -37,17 +37,21 @@ body {
  */
 
   }
+  
 
+
+
+}
 
 p {
-font-family: 'Nanum Brush Script', cursive;
+font-family: 'Nanum Pen Script', cursive;
 font-size: x-small;
 font-weight: bold;
 line-height: 90%;
 }
 
 .btn-info {
-font-family: 'Nanum Brush Script', cursive;
+font-family: 'Nanum Pen Script', cursive;
 border: 2px solid white;
 font-size: small;
 color: white;
@@ -143,7 +147,7 @@ font-size: normal;}
 .squarePLUS, .freesquarePLUS {
 	display: block;
 	float: left;
-/* 	overflow: hidden; */
+	overflow: hidden;
 	background-color: pink;
 	color: black;
 	text-align: center;

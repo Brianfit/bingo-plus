@@ -6,8 +6,8 @@ var exec  = require('child_process').exec;
 var path  = require('path');
 
 var root = process.argv[2];
-var androidManifest = path.join(root, 'platforms/android/AndroidManifest.xml');
-fs.exists(path.join(root, 'platforms/android'), function(exists) {
+var androidManifest = path.join(root, 'platforms/android/app/src/AndroidManifest.xml');
+fs.exists(path.join(root, 'platforms/android/app/src'), function(exists) {
     if(!exists) return;
     fs.readFile(androidManifest, 'utf8', function(err, data) {
         if(err) throw err;

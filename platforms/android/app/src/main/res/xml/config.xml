@@ -23,7 +23,7 @@
     </feature>
     <name>Gender Balance this Ocean Conference Bingo</name>
     <description>
-        A Bingo Game where Everyone Loses
+        A Bingo Game to encourage gender equality at oceans conservation conferences. 
     </description>
     <author email="brian@dancing-fox.com" href="http://www.dancing-fox.com">
         Brian Fitzgerald
@@ -37,11 +37,18 @@
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
     <allow-intent href="market:*" />
-    <hook src="/scripts/010-update-android-manifest.js" type="after_prepare" />
     <icon density="ldpi" src="res/icon/android/icon-36-ldpi.png" />
     <icon density="mdpi" src="res/icon/android/icon-48-mdpi.png" />
     <icon density="hdpi" src="res/icon/android/icon-72-hdpi.png" />
     <icon density="xhdpi" src="res/icon/android/icon-96-xhdpi.png" />
+    <Preference name="SplashScreen" value="screen" />
+    <Preference name="AutoHideSplashScreen" value="true" />
+    <Preference name="ShowSplashScreenSpinner" value="true" />
+    <Preference name="FadeSplashScreen" value="false" />
+    <Preference name="FadeSplashScreenDuration" value="1.0" />
+    <Preference name="SplashScreenDelay" value="100" />
+    <Preference name="SplashScreenBackgroundColor" value="#FE5D01" />
+    <Preference name="SplashMaintainAspectRatio" value="true" />
     <splash density="land-hdpi" src="res/screen/android/screen-hdpi-landscape.png" />
     <splash density="land-ldpi" src="res/screen/android/screen-ldpi-landscape.png" />
     <splash density="land-mdpi" src="res/screen/android/screen-mdpi-landscape.png" />
@@ -51,5 +58,6 @@
     <splash density="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
     <splash density="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="loadUrlTimeoutValue" value="60000" />
     <preference name="Orientation" value="portrait" />
 </widget>
