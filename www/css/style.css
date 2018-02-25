@@ -15,9 +15,12 @@ html {	position: relative;
 
 body {
 	background-color: #285979 !important;
-	font-family: 'Nanum Brush Script', cursive;
+	font-family: 'Nanum Pen Script', cursive;
+	margin-bottom: 80px;
 /* 	margin bottom must equal footer height */
-    margin-bottom: 80px;
+/* These for the notch on iphone x */
+    padding-top: constant(safe-area-inset-top);
+    padding-top: env(safe-area-inset-top);
 
 }
 
@@ -26,9 +29,15 @@ body {
   position: absolute;
   bottom: 0;
  */
-  width: 100%;
+/*   width: 100%; */
   /* Set the fixed height of the footer here and in body margin bottom */
-  height: 80px;
+/* 
+  height: 120px;
+  padding-top: 30px
+  margin-top: 20px;
+ */
+
+width = calc(#board.css(width));
 
 /* 
 	margin-bottom: 10px; 
@@ -40,29 +49,35 @@ body {
   
 
 
-
-}
-
 p {
 font-family: 'Nanum Pen Script', cursive;
-font-size: x-small;
 font-weight: bold;
-line-height: 90%;
+    padding: 1px 1px 1px 1px;
+    margin:  2px 2px 2px 2px;
+    line-height: 60%;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+
 }
 
 .btn-info {
 font-family: 'Nanum Pen Script', cursive;
 border: 2px solid white;
-font-size: small;
+font-size: .7em;
 color: white;
 font-weight: bold;
-line-height: 90%;
+line-height: 80%;
 background-color: black !important;
+margin: 2px 2px 2px 2px;
+padding:2px 2px 2px 2px;
 }
 
 #container {
 	background-color: #285979;
 }	
+
 
 
 #header, #footerblock {
@@ -73,7 +88,7 @@ background-color: black !important;
 /* 	opacity: 0.5; */
 /* 	text-shadow: 0px 1px 0px #e1e1e1, 0px -1px 0px #313131; */
    	background-color: #50CAF1;
-   	font-family: 'Nanum Brush Script', cursive;
+   	font-family: 'Nanum Pen Script', cursive;
 	font-size: xx-large;
 	line-height: normal;
 	font-weight: bold;
@@ -134,7 +149,7 @@ font-size: normal;}
 	text-align: center;
 	width:  calc(100%  / 5 );
  	height: 80px;
-	padding: 4px 4px 4px 4px;
+	padding: 5px 5px 5px 5px;
 	border: 1px solid white;
 	transition-property: background-color;
 	transition-duration: 1s;
@@ -153,7 +168,7 @@ font-size: normal;}
 	text-align: center;
 	width:  calc(100%  / 5 );
  	height: 80px;
-	padding: 4px 4px 4px 4px;
+	padding: 5px 5px 5px 5px;
 	border: 1px solid black;
 	transition-property: background-color;
 	transition-duration: 1s;
@@ -161,6 +176,14 @@ font-size: normal;}
 	-moz-transition-duration: 1s;
 	-webkit-transition-property: background-color;
 	-webkit-transition-duration: 1s;
+}
+
+.square p {
+  pointer-events: none;
+}
+
+.squarePLUS p {
+  pointer-events: none;
 }
 
 .maincontainer {
@@ -172,45 +195,35 @@ margin-top: 15px;
 	background-color: #313131;
 }
 
-.text {
-	vertical-align: middle;
 
-}
 
 /* iphone 5 */
 @media screen and (device-aspect-ratio: 40/71) {
  body {
-    font-size: 12px !important;
+    font-size: 11px;
 
     }
-    p, .btn,.text { font-size: x-small !important;}
    .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 60px;}
-   #header {font-size: normal}
+   .btn-info{font-size:.6em}
 }
 }
 @media (min-width: 640px) {   
     body {
-    font-size: 12px !important;
-
+    font-size: 18px;
 
 
     }
-    p, .btn,.text { font-size: x
-    -small !important; }
+
    .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 60px;}
-    #header {font-size: normal}
 }
 
 @media (min-width: 768px) {   
     body {
-    font-size: 20px !important;
-
-
+    font-size: 22px;
 
     }
-    p, .btn,.text { font-size: normal !important; }
+
    .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 90px;}
-    #header {font-size: large}
 }
 
 /* all ipads */
@@ -221,27 +234,24 @@ body {
     font-size: 20px;
 /*     color: blue; */
 
-
-
     }
-       .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 120px;} 
-    p, .btn,.text { font-size: x-large !important; }   
-    .maincontainer {margin-top: 60px;}        
+       .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 120px;}        
 }
 
 /* Big screen */
 @media (min-width: 1200px) {
         body {
-     margin-top: 40px;   
+    margin-top: 40px;   
     font-size: 22px;
 
     }
-            p, .btn,.text { font-size: xx-large !important;}
+
            .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 150px;}
 }
 
 
 
+/* 
 .lose {
 	color: #ffffff !important;
    	background-color: red !important;
@@ -251,6 +261,7 @@ body {
 	color: #ffffff !important;
    	background-color: purple !important;
 }
+ */
 
 @media only screen 
 and (min-device-width : 320px) 
@@ -258,12 +269,12 @@ and (max-device-width : 480px) {
 
 	#header {
 		text-align: center;
-		padding: 20px 20px 12px 20px;
+		padding: 20px 20px 20px 20px;
 /* 		background-color: #FFBF00; */
 	}
 	
 	#footerblock {	
-		padding: 16px 20px 8px 20px;
+		padding: 20px 20px 20px 20px;
 	}
 
 

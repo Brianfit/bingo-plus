@@ -1,22 +1,19 @@
 // To test:
-// Render of the grid on various devices (I think I fixed fairphone issue)
-// Stability: any crashes or lags
-// Screen shot any weird renderings please
+//Pink board not adding correctly valueplus????
+
 
 // To Do:
-// Get StatusBar working
-// Localize fonts
-// Replace header, win, and loss, with images
 // Add tiles to social media
 // Consider making board of image tiles instead of text
 // Build About page
 // Figure out why pink screen diagonal doesn't calculate
-// fix background color after win or loss screen
 
 
 $(document).ready(function() {
  
  console.log('DOCUMENT READY!')
+ winsoundoff = false;
+ losesoundoff = false;
 	
 	$('body').on('touchmove', false);
 	
@@ -29,10 +26,10 @@ $(document).ready(function() {
 	
 	for (i=0; i<24; i++)	{
 		if (i==12) {
-			$('#board').append("<div data-value='1' class='selected freesquare' id='sqfree'><p class='text hyphens noselect'><br/>free space</p></div>");
-			$('#board').append("<div data-value='0' class='square' id='sq12'><p class='text hyphens noselect'><br/>"+JSONBingo.squares[i].square+"</p></div>");
+			$('#board').append("<div data-value='1' class='selected freesquare align-top' id='sqfree'><p class='align-top text'>free space</p></div>");
+			$('#board').append("<div data-value='0' class='square align-top' id='sq12'><p class='align-top text'>"+JSONBingo.squares[i].square+"</p></div>");
 		} else {
-			$('#board').append("<div data-value='0' class='square' id='sq"+i+"'><p class='text hyphens noselect'><br/>"+JSONBingo.squares[i].square+"</p></div>");
+			$('#board').append("<div data-value='0' class='square align-top' id='sq"+i+"'><p class='align-top text'>"+JSONBingo.squares[i].square+"</p></div>");
 
 		}
 		
@@ -45,10 +42,10 @@ shuffle(JSONBingoPLUS.squaresPLUS);
 for (i=0; i<24; i++)	{
 	
 		if (i==12) {
-			$('#positiveboard').append("<div data-valuePLUS='1' class='selected freesquarePLUS' id='sqfreePLUS'><p class='text hyphens noselect'><br/>free space</p></div>");
-			$('#positiveboard').append("<div data-valuePLUS='0' class='squarePLUS' id='sqp12'><p class='text hyphens noselect'><br/>"+JSONBingoPLUS.squaresPLUS[i].squarePLUS+"</p></div>");
+			$('#positiveboard').append("<div data-valueplus='1' class='selected freesquarePLUS align-top' id='sqfreePLUS'><p class='align-top text'><br/>free space</p></div>");
+			$('#positiveboard').append("<div data-valueplus='0' class='squarePLUS align-top' id='sqp12'><p class='align-top text'>"+JSONBingoPLUS.squaresPLUS[i].squarePLUS+"</p></div>");
 		} else {
-			$('#positiveboard').append("<div data-valuePLUS='0' class='squarePLUS' id='sqp"+i+"'><p class='text hyphens noselect'><br/>"+JSONBingoPLUS.squaresPLUS[i].squarePLUS+"</p></div>");
+			$('#positiveboard').append("<div data-valueplus='0' class='squarePLUS align-top' id='sqp"+i+"'><p class='align-top text'>"+JSONBingoPLUS.squaresPLUS[i].squarePLUS+"</p></div>");
 		}
 		
   }
@@ -95,7 +92,8 @@ $('#positiveboard').append(BottomMenu);
 			$('#header').html(loseText);
 			$('#header').addClass("lose");
 	
-         	loseSnd.play();
+         	if (losesoundoff == false) {loseSnd.play();
+         	losesoundoff = true;}
     		
     	} else {
 			$('#header').html(headerImage);
@@ -110,13 +108,13 @@ $('#positiveboard').append(BottomMenu);
 	  } else {
       $(this).toggleClass('selected');
 
-      if ($(this).data('valuePLUS') == 1) {
+      if ($(this).data('valueplus') == 1) {
  
 
-      		$(this).data('valuePLUS', 0);}
+      		$(this).data('valueplus', 0);}
       else {
 
-            $(this).data('valuePLUS', 1); 
+            $(this).data('valueplus', 1); 
 
       		}
       		}
@@ -125,26 +123,27 @@ $('#positiveboard').append(BottomMenu);
       		
          clickSnd.play();
 
-		var row1 = ($('#sqp0').data('valuePLUS')+$('#sqp1').data('valuePLUS')+$('#sqp2').data('valuePLUS')+$('#sqp3').data('valuePLUS')+$('#sqp4').data('valuePLUS'));
-		var row2 = ($('#sqp5').data('valuePLUS')+$('#sqp6').data('valuePLUS')+$('#sqp7').data('valuePLUS')+$('#sqp8').data('valuePLUS')+$('#sqp9').data('valuePLUS'));
-		var row3 = ($('#sqp10').data('valuePLUS')+$('#sqp11').data('valuePLUS')+$('#sqfreePLUS').data('valuePLUS')+$('#sqp12').data('valuePLUS')+$('#sqp13').data('valuePLUS'));
-		var row4 = ($('#sqp14').data('valuePLUS')+$('#sqp15').data('valuePLUS')+$('#sqp16').data('valuePLUS')+$('#sqp17').data('valuePLUS')+$('#sqp18').data('valuePLUS'));	
-		var row5 = ($('#sqp19').data('valuePLUS')+$('#sqp20').data('valuePLUS')+$('#sqp21').data('valuePLUS')+$('#sqp22').data('valuePLUS')+$('#sqp23').data('valuePLUS'));			
+		var row1 = ($('#sqp0').data('valueplus')+$('#sqp1').data('valueplus')+$('#sqp2').data('valueplus')+$('#sqp3').data('valueplus')+$('#sqp4').data('valueplus'));
+		var row2 = ($('#sqp5').data('valueplus')+$('#sqp6').data('valueplus')+$('#sqp7').data('valueplus')+$('#sqp8').data('valueplus')+$('#sqp9').data('valueplus'));
+		var row3 = ($('#sqp10').data('valueplus')+$('#sqp11').data('valueplus')+$('#sqfreePLUS').data('valueplus')+$('#sqp12').data('valueplus')+$('#sqp13').data('valueplus'));
+		var row4 = ($('#sqp14').data('valueplus')+$('#sqp15').data('valueplus')+$('#sqp16').data('valueplus')+$('#sqp17').data('valueplus')+$('#sqp18').data('valueplus'));	
+		var row5 = ($('#sqp19').data('valueplus')+$('#sqp20').data('valueplus')+$('#sqp21').data('valueplus')+$('#sqp22').data('valueplus')+$('#sqp23').data('valueplus'));			
 
-		var col1 = ($('#sqp0').data('valuePLUS')+$('#sqp5').data('valuePLUS')+$('#sqp10').data('valuePLUS')+$('#sqp14').data('valuePLUS')+$('#sqp19').data('valuePLUS'));
-		var col2 = ($('#sqp1').data('valuePLUS')+$('#sqp6').data('valuePLUS')+$('#sqp11').data('valuePLUS')+$('#sqp15').data('valuePLUS')+$('#sqp20').data('valuePLUS'));
-		var col3 = ($('#sqp2').data('valuePLUS')+$('#sqp7').data('valuePLUS')+$('#sqfreePLUS').data('valuePLUS')+$('#sqp16').data('valuePLUS')+$('#sqp21').data('valuePLUS'));
-		var col4 = ($('#sqp3').data('valuePLUS')+$('#sqp8').data('valuePLUS')+$('#sqp12').data('valuePLUS')+$('#sqp17').data('valuePLUS')+$('#sqp22').data('valuePLUS'));	
-		var col5 = ($('#sqp4').data('valuePLUS')+$('#sqp9').data('valuePLUS')+$('#sqp13').data('valuePLUS')+$('#sqp18').data('valuePLUS')+$('#sqp23').data('valuePLUS'));			
+		var col1 = ($('#sqp0').data('valueplus')+$('#sqp5').data('valueplus')+$('#sqp10').data('valueplus')+$('#sqp14').data('valueplus')+$('#sqp19').data('valueplus'));
+		var col2 = ($('#sqp1').data('valueplus')+$('#sqp6').data('valueplus')+$('#sqp11').data('valueplus')+$('#sqp15').data('valueplus')+$('#sqp20').data('valueplus'));
+		var col3 = ($('#sqp2').data('valueplus')+$('#sqp7').data('valueplus')+$('#sqfreePLUS').data('valueplus')+$('#sqp16').data('valueplus')+$('#sqp21').data('valueplus'));
+		var col4 = ($('#sqp3').data('valueplus')+$('#sqp8').data('valueplus')+$('#sqp12').data('valueplus')+$('#sqp17').data('valueplus')+$('#sqp22').data('valueplus'));	
+		var col5 = ($('#sqp4').data('valueplus')+$('#sqp9').data('valueplus')+$('#sqp13').data('valueplus')+$('#sqp18').data('valueplus')+$('#sqp23').data('valueplus'));			
 
-		var diag1 = ($('#sqp0').data('valuePLUS')+$('#sqp6').data('valuePLUS')+$('#sqfreePLUS').data('valuePLUS')+$('#sqp17').data('valuePLUS')+$('#sqp23').data('valuePLUS'));	
-		var diag2 = ($('#sqp4').data('valuePLUS')+$('#sqp8').data('valuePLUS')+$('#sqfreePLUS').data('valuePLUS')+$('#sqp15').data('valuePLUS')+$('#sqp19').data('valuePLUS'));	
+		var diag1 = ($('#sqp0').data('valueplus')+$('#sqp6').data('valueplus')+$('#sqfreePLUS').data('valueplus')+$('#sqp17').data('valueplus')+$('#sqp23').data('valueplus'));	
+		var diag2 = ($('#sqp4').data('valueplus')+$('#sqp8').data('valueplus')+$('#sqfreePLUS').data('valueplus')+$('#sqp15').data('valueplus')+$('#sqp19').data('valueplus'));	
 		
 		if (row1 == 5 || row2 == 5 || row3 == 5 || row4 == 5 || row5 == 5 || col1 == 5 || col2 == 5 || col3 == 5  || col4 == 5  || col5 == 5 || diag1 == 5 || diag2 == 5) {
 			$('#header').html(winText);
 			$('#header').addClass("win");
 	
-         	winSnd.play();
+         	if (winsoundoff == false){ winSnd.play();
+         	winsoundoff = true;}
     		
     	} else {
 			$('#header').html(headerImage);
@@ -161,15 +160,19 @@ shuffle = function(v){
     	return v;
 };
 
+var LoadTweet = function() {
+var tweet = GetMsg();
+window.plugins.socialsharing.share('I\'m at '+hashtag+' playing '+headerText+'. Ticking the box for \''+ tweet+'\'', headerText, 'http://women4oceans.weebly.com/uploads/1/2/1/3/12139956/website1_orig.png', 'http://www.women4oceans.weebly.com')
+}
 
 var GetMsg = function() {
-// console.log('GetMsg '+msg);
+console.log('GetMsg '+msg);
     return msg;
-  }
+  };
   
 function onPrompt(results) {
     hashtag = results.input1;
-}
+};
 
 
 var HashTagLoad = function() {
@@ -181,7 +184,7 @@ navigator.notification.prompt(
     ['Ok','Exit'],             // buttonLabels
     '#OceanConference'                 // defaultText
 )  
-  }
+  };
   
 var FlipBoard = function(){
 // console.log('attempting flip');
@@ -206,13 +209,6 @@ var onDeviceReady = function() {
 		    StatusBar.styleDefault();
 		}
  
-
-
-var LoadTweet = function() {
-var tweet = GetMsg();
-window.plugins.socialsharing.share('I\'m at '+hashtag+' playing '+headerText+'. Ticking the box for \''+ tweet+'\'', headerText, 'http://women4oceans.weebly.com/uploads/1/2/1/3/12139956/website1_orig.png', 'http://www.women4oceans.weebly.com')
-}
-
 
 
 /*! Normalized address bar hiding for iOS & Android (c) @scottjehl MIT License */

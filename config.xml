@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-packageName="net.brianfitzgerald.bingo" id="net.brian-fitzgerald.bingo" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget android-packageName="net.brianfitzgerald.bingo" id="net.brian-fitzgerald.bingo" version="1.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Gender Balance this Ocean Conference Bingo</name>
     <description>
         A Bingo Game to encourage gender equality at oceans conservation conferences. 
@@ -26,6 +26,11 @@
         <allow-intent href="itms-apps:*" />
         <preference name="Orientation" value="Portrait" />
         <splash src="res/screen/ios/Default@2x~universal~anyany.png" />
+        <splash src="res/screen/ios/Default@2x~universal~comany.png" />
+        <splash src="res/screen/ios/Default@2x~universal~comcom.png" />
+        <splash src="res/screen/ios/Default@3x~universal~anyany.png" />
+        <splash src="res/screen/ios/Default@3x~universal~anycom.png" />
+        <splash src="res/screen/ios/Default@3x~universal~comany.png" />
     </platform>
     <platform name="android">
         <allow-intent href="market:*" />
@@ -57,7 +62,9 @@
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
     <plugin name="cordova-plugin-statusbar" spec="^2.4.1" />
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
+    <plugin name="cordova-plugin-wkwebview-engine" spec="^1.1.4" />
+    <plugin name="es6-promise-plugin" spec="^4.2.2" />
     <plugin name="cordova-plugin-x-socialsharing" spec="^5.3.1" />
     <engine name="ios" spec="^4.5.4" />
-    <engine name="android" spec="^7.1.0" />
+    <engine name="android" spec="^7.0.0" />
 </widget>

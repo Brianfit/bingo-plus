@@ -37,7 +37,7 @@
      
 	</head>
 	<body onload="onLoad()">
-		<div id="main" class="container">
+		<div id="main" class="container align-middle">
 			<div class="row">
 				<div class="col-md-12">
 					<div id="header" class="text-center">
@@ -66,16 +66,16 @@
 		 $('body').on('click', '.square', function(e) 
 		 {
 		            msg = document.getElementById(e.target.id).getElementsByClassName('text')[0].innerHTML;
-		            msg = msg.substring(4);
-		// 		            console.log('here:'+msg);
+		           
+				            console.log('here:'+msg);
 		            
 		            
 		});
 				 $('body').on('click', '.squarePLUS', function(e) 
 		 {
 		            msg = document.getElementById(e.target.id).getElementsByClassName('text')[0].innerHTML;
-		            msg = msg.substring(4);
-		// 		            console.log('herePLUS:'+msg);
+		      
+				            console.log('herePLUS:'+msg);
 		            
 		            
 		});

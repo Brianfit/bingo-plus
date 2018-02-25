@@ -22,13 +22,15 @@
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
     },
+    "cordova-plugin-wkwebview-engine": {
+      "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
+    },
     "cordova-plugin-x-socialsharing": {
       "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
     }
   },
-  "dependent_plugins": {
-    "es6-promise-plugin": {
-      "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
-    }
-  }
+  "dependent_plugins": {}
 }
