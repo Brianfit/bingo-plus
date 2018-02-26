@@ -12,6 +12,8 @@
 $(document).ready(function() {
  
  console.log('DOCUMENT READY!')
+ winsoundoff = false;
+ losesoundoff = false;
 	
 	$('body').on('touchmove', false);
 	
@@ -90,7 +92,8 @@ $('#positiveboard').append(BottomMenu);
 			$('#header').html(loseText);
 			$('#header').addClass("lose");
 	
-         	loseSnd.play();
+         	if (losesoundoff == false) {loseSnd.play();
+         	losesoundoff = true;}
     		
     	} else {
 			$('#header').html(headerImage);
@@ -139,7 +142,8 @@ $('#positiveboard').append(BottomMenu);
 			$('#header').html(winText);
 			$('#header').addClass("win");
 	
-         	winSnd.play();
+         	if (winsoundoff == false){ winSnd.play();
+         	winsoundoff = true;}
     		
     	} else {
 			$('#header').html(headerImage);

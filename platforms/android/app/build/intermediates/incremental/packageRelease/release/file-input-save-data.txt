@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sun Feb 25 19:46:51 CET 2018
+#Sun Feb 25 23:20:49 CET 2018
 5.base=/Users/gpiuser/Sites/Women4Oceans/net.brian-fitzgerald.bingo/platforms/android/app/build/intermediates/assets/release
 42.base=/Users/gpiuser/Sites/Women4Oceans/net.brian-fitzgerald.bingo/platforms/android/app/build/intermediates/assets/release
 32.set=ANDROID_RESOURCE
@@ -73,7 +73,7 @@ count=56
 7.set=ANDROID_RESOURCE
 45.set=ASSET
 22.file=/Users/gpiuser/Sites/Women4Oceans/net.brian-fitzgerald.bingo/platforms/android/app/build/intermediates/assets/release/www/css/style.css
-32.file=/Users/gpiuser/Sites/Women4Oceans/net.brian-fitzgerald.bingo/platforms/android/app/build/intermediates/res/release/resources-release.ap_/res/drawable-land-mdpi-v4/screen.png
+32.file=/Users/gpiuser/Sites/Women4Oceans/net.brian-fitzgerald.bingo/platforms/android/app/build/intermediates/res/release/resources-release.ap_/res/drawable-land-xhdpi-v4/screen.png
 34.set=ANDROID_RESOURCE
 26.file=/Users/gpiuser/Sites/Women4Oceans/net.brian-fitzgerald.bingo/platforms/android/app/build/intermediates/assets/release/www/plugins/cordova-plugin-dialogs/www/notification.js
 23.set=ASSET
@@ -113,7 +113,7 @@ count=56
 47.file=/Users/gpiuser/Sites/Women4Oceans/net.brian-fitzgerald.bingo/platforms/android/app/build/intermediates/res/release/resources-release.ap_/res/mipmap-mdpi-v4/icon.png
 55.set=ANDROID_RESOURCE
 23.file=/Users/gpiuser/Sites/Women4Oceans/net.brian-fitzgerald.bingo/platforms/android/app/build/intermediates/assets/release/www/plugins/cordova-plugin-screen-orientation/www/screenorientation.js
-33.file=/Users/gpiuser/Sites/Women4Oceans/net.brian-fitzgerald.bingo/platforms/android/app/build/intermediates/res/release/resources-release.ap_/res/drawable-land-xhdpi-v4/screen.png
+33.file=/Users/gpiuser/Sites/Women4Oceans/net.brian-fitzgerald.bingo/platforms/android/app/build/intermediates/res/release/resources-release.ap_/res/drawable-land-mdpi-v4/screen.png
 6.set=ASSET
 17.file=/Users/gpiuser/Sites/Women4Oceans/net.brian-fitzgerald.bingo/platforms/android/app/build/intermediates/assets/release/www/js/jquery-3.3.1.min.js
 0.base=/Users/gpiuser/Sites/Women4Oceans/net.brian-fitzgerald.bingo/platforms/android/app/build/intermediates/assets/release

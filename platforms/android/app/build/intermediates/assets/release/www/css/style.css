@@ -149,7 +149,7 @@ font-size: normal;}
 	text-align: center;
 	width:  calc(100%  / 5 );
  	height: 80px;
-	padding: 2px 2px 2px 2px;
+	padding: 5px 5px 5px 5px;
 	border: 1px solid white;
 	transition-property: background-color;
 	transition-duration: 1s;
@@ -168,7 +168,7 @@ font-size: normal;}
 	text-align: center;
 	width:  calc(100%  / 5 );
  	height: 80px;
-	padding: 2px 2px 2px 2px;
+	padding: 5px 5px 5px 5px;
 	border: 1px solid black;
 	transition-property: background-color;
 	transition-duration: 1s;

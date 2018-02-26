@@ -20,20 +20,23 @@ var hashtag = "#OceansConference";
 
 var idstring = "sq11";
 
+var winsoundoff = false;
+var losesoundoff = false;
+
 // var idstring = "sqp11";
 
 var msg = "I'm playing Gender Equality Conference Bingo"
 
 var JSONBingo = {"squares": [
         {"square": "All male panel (manel)"},
-        {"square": "Mansplained to"},
+        {"square": "Man-splained to"},
         {"square": "Woman interrupted"},
         {"square": "FisherMEN"},
         {"square": "Ogling"},
         {"square": "We tried to find a woman but..."},
         {"square": "Women ignored"},
         {"square": "Condescension"},
-        {"square": "She's smart and beautiful"},
+        {"square": "'She's smart and beautiful'"},
         {"square": "Leering"},
         {"square": "Racial assumptions"},
         {"square": "No racial diversity"},
@@ -47,7 +50,7 @@ var JSONBingo = {"squares": [
         {"square": "Pet name e.g. Sweetheart"},
         {"square": "Accused of being un-lady like"},
         {"square": "Asked about relationship status"},
-        {"square": "But what about the men..."},
+        {"square": "But what about men..."},
         {"square": "Dismissive behavior"},
         {"square": "Woman's professional title dropped"}  	
     ]
@@ -97,7 +100,7 @@ var JSONBingoPLUS = {"squaresPLUS": [
         {"squarePLUS": "Uninterrupted female monologue"},
         {"squarePLUS": "Zero all-male panels"},
         {"squarePLUS": "Women are called women"},
-        {"squarePLUS": "eference to a woman's achievements"},
+        {"squarePLUS": "Reference to a woman's achievements"},
         
  {"squarePLUS": "Racially diverse panels"},
  {"squarePLUS": "Gender balanced awards"},

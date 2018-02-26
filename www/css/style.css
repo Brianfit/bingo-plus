@@ -24,6 +24,12 @@ body {
 
 }
 
+img {
+    max-width: 100%;
+    min-height: 100%;
+    padding: 1px 1px 1px 1px;
+    }
+
 .footer {
 /* 
   position: absolute;
@@ -147,8 +153,9 @@ font-size: normal;}
 	background-color: #8DC6E4;
 	color: black;
 	text-align: center;
+/* 	width is 20% of view width, height is 20% of view width */	
 	width:  calc(100%  / 5 );
- 	height: 80px;
+ 	height: 20vw;
 	padding: 5px 5px 5px 5px;
 	border: 1px solid white;
 	transition-property: background-color;
@@ -166,8 +173,9 @@ font-size: normal;}
 	background-color: pink;
 	color: black;
 	text-align: center;
+/* 	width is 20% of view width, height is 20% of view width */
 	width:  calc(100%  / 5 );
- 	height: 80px;
+ 	height: 20vw;
 	padding: 5px 5px 5px 5px;
 	border: 1px solid black;
 	transition-property: background-color;
@@ -197,16 +205,12 @@ margin-top: 15px;
 
 
 
-/* iphone 5 */
-@media screen and (device-aspect-ratio: 40/71) {
- body {
-    font-size: 11px;
 
-    }
-   .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 60px;}
-   .btn-info{font-size:.6em}
+@media (min-width: 639px){
+body {font-size: 14px}
 }
-}
+
+
 @media (min-width: 640px) {   
     body {
     font-size: 18px;
@@ -214,16 +218,26 @@ margin-top: 15px;
 
     }
 
-   .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 60px;}
 }
+
+/* iphone 5 */
+@media screen and (device-aspect-ratio: 40/71) {
+ body {
+    font-size: 11px;
+
+    }
+
+   .btn-info{font-size:.6em}
+}
+
 
 @media (min-width: 768px) {   
     body {
     font-size: 22px;
 
+
     }
 
-   .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 90px;}
 }
 
 /* all ipads */
@@ -231,11 +245,11 @@ margin-top: 15px;
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
 body {
-    font-size: 20px;
-/*     color: blue; */
+    font-size: 22px;
+
 
     }
-       .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 120px;}        
+     
 }
 
 /* Big screen */
@@ -246,23 +260,13 @@ body {
 
     }
 
-           .square, .freesquare, .squarePLUS, .freesquarePLUS {height: 150px;}
+
 }
+
 
 
 
 /* 
-.lose {
-	color: #ffffff !important;
-   	background-color: red !important;
-}
-
-.win {
-	color: #ffffff !important;
-   	background-color: purple !important;
-}
- */
-
 @media only screen 
 and (min-device-width : 320px) 
 and (max-device-width : 480px) {
@@ -276,6 +280,7 @@ and (max-device-width : 480px) {
 	#footerblock {	
 		padding: 20px 20px 20px 20px;
 	}
+ */
 
 
 }
