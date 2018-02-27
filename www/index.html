@@ -65,15 +65,17 @@
 		
 		 $('body').on('click', '.square', function(e) 
 		 {
-		            msg = document.getElementById(e.target.id).getElementsByClassName('text')[0].innerHTML;
+		            msg = document.getElementById(e.target.id).getElementsByClassName('sharetxt')[0].innerHTML;
+                    pix = document.getElementById(e.target.id).getElementsByClassName('img-responsive')[0].src;
+		        
 		           
-				            console.log('here:'+msg);
+				             console.log(msg+' '+pix);
 		            
 		            
 		});
 				 $('body').on('click', '.squarePLUS', function(e) 
 		 {
-		            msg = document.getElementById(e.target.id).getElementsByClassName('text')[0].innerHTML;
+		            msg = document.getElementById(e.target.id).getElementsByClassName('sharetxt')[0].innerHTML;
 		      
 				            console.log('herePLUS:'+msg);
 		            

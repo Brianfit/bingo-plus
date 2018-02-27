@@ -20,6 +20,8 @@ var hashtag = "#OceansConference";
 
 var idstring = "sq11";
 
+var pix = "blank"
+
 var winsoundoff = false;
 var losesoundoff = false;
 
@@ -58,66 +60,91 @@ var msg = "I'm playing Gender Equality Conference Bingo"
 
 
 var JSONBingo = {"squares": [
-        {"square": "<img src='img/2.png' class='img-responsive'>"},
-        {"square": "<img src='img/3.png' class='img-responsive'>"},
-        {"square": "<img src='img/4.png' class='img-responsive'>"},
-        {"square": "<img src='img/5.png' class='img-responsive'>"},
-        {"square": "<img src='img/6.png' class='img-responsive'>"},
-        {"square":  "<img src='img/2.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/3.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/4.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/5.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/6.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/2.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/3.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/4.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/5.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/6.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/2.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/3.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/4.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/5.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/6.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/2.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/3.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/4.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/5.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/6.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/1.png' class='img-responsive'>"}, 
-        {"square":  "<img src='img/1.png' class='img-responsive'>"}
+        {"square": "<img src='./img/n1.png' class='img-responsive'><span class='sharetxt'>All male panel (manel)</span>"},
+        {"square": "<img src='./img/n2.png'  class='img-responsive'><span class='sharetxt'>Man-splained to</span>"},
+        {"square": "<img src='./img/n3.png' class='img-responsive'><span class='sharetxt'>Woman interrupted</span>"},
+        {"square": "<img src='./img/n4.png' class='img-responsive'><span class='sharetxt'>FisherMEN</span>"},
+        {"square": "<img src='./img/n5.png' class='img-responsive'><span class='sharetxt'>Ogling</span>"},
+        {"square":  "<img src='./img/n6.png' class='img-responsive'><span class='sharetxt'>We tried to find a woman but...</span>"}, 
+        {"square":  "<img src='./img/n7.png' class='img-responsive'><span class='sharetxt'>Women ignored</span>"}, 
+        {"square":  "<img src='./img/n8.png' class='img-responsive'><span class='sharetxt'>Condescension</span>"}, 
+        {"square":  "<img src='./img/n9.png' class='img-responsive'><span class='sharetxt'>'She's smart and beautiful'</span>"}, 
+        {"square":  "<img src='./img/n10.png' class='img-responsive'><span class='sharetxt'>Leering</span>"}, 
+        {"square":  "<img src='./img/n11.png' class='img-responsive'><span class='sharetxt'>Racial assumptions</span>"}, 
+        {"square":  "<img src='./img/n12.png' class='img-responsive'><span class='sharetxt'>No racial diversity</span>"}, 
+        {"square":  "<img src='./img/n13.png' class='img-responsive'><span class='sharetxt'>Woman objectified</span>"}, 
+        {"square":  "<img src='./img/n14.png' class='img-responsive'><span class='sharetxt'>Inappropriate touching</span>"}, 
+        {"square":  "<img src='./img/n15.png' class='img-responsive'><span class='sharetxt'>Presumption of maleness</span>"}, 
+        {"square":  "<img src='./img/n16.png' class='img-responsive'><span class='sharetxt'>Panel overwhelmingly male</span>"}, 
+        {"square":  "<img src='./img/n17.png' class='img-responsive'><span class='sharetxt'>Women referred to as girl</span>"}, 
+        {"square":  "<img src='./img/n18.png' class='img-responsive'><span class='sharetxt'>Reference to a woman's appearance</span>"}, 
+        {"square":  "<img src='./img/n19.png' class='img-responsive'><span class='sharetxt'>Male dominated discussion</span>"}, 
+        {"square":  "<img src='./img/n20.png' class='img-responsive'><span class='sharetxt'>Pet name e.g. Sweetheart</span>"}, 
+        {"square":  "<img src='./img/n21.png' class='img-responsive'><span class='sharetxt'>Accused of being un-lady like</span>"}, 
+        {"square":  "<img src='./img/n22.png' class='img-responsive'><span class='sharetxt'>Asked about relationship status</span>"}, 
+        {"square":  "<img src='./img/n23.png' class='img-responsive'><span class='sharetxt'>But what about men...</span>"}, 
+        {"square":  "<img src='./img/n24.png' class='img-responsive'><span class='sharetxt'>Dismissive behavior</span>"},
+        {"square":  "<img src='./img/n25.png' class='img-responsive'><span class='sharetxt'>Woman's professional title dropped </span>"}
     ]
     };
     
 var JSONBingoPLUS = {"squaresPLUS": [
-        {"squarePLUS": "Neutral pronouns"},
-        {"squarePLUS": "Moderator treats panelists equally"},
-        {"squarePLUS": "Female professional titles used"},
-        
-        {"squarePLUS": "Good gender ratio panels"},
-        {"squarePLUS": "Uninterrupted female monologue"},
-        {"squarePLUS": "Zero all-male panels"},
-        {"squarePLUS": "Women are called women"},
-        {"squarePLUS": "Reference to a woman's achievements"},
-        
- {"squarePLUS": "Racially diverse panels"},
- {"squarePLUS": "Gender balanced awards"},
- {"squarePLUS": "Questions taken from women"},
- {"squarePLUS": "No straying eyes"},
- {"squarePLUS": "Inclusion"},
- {"squarePLUS": "No racial assumptions"},
- {"squarePLUS": "Woman's comment respected"},
- {"squarePLUS": "Engaging on a woman's achievements"},
- {"squarePLUS": "Positive networking experience"},
- {"squarePLUS": "No unsolicited touching"},
- {"squarePLUS": "Safe environment"},
- {"squarePLUS": "Woman invited to collaborate"},
- {"squarePLUS": "Women's leadership celebrated"},
- {"squarePLUS": "Women's professional expertise sought"},
- {"squarePLUS": "Female keynote speakers"},
- {"squarePLUS": "No sexual harassment"},
- {"squarePLUS": "Sexual orientation not alluded to"}
+        {"squarePLUS": "<img src='./img/p1.png' class='img-responsive'><span class='sharetxt'>Neutral pronouns</span>"},
+        {"squarePLUS": "<img src='./img/p2.png' class='img-responsive'><span class='sharetxt'>Moderator treats panelists equally</span>"},
+        {"squarePLUS": "<img src='./img/p3.png' class='img-responsive'><span class='sharetxt'>Female professional titles used</span>"},
+        {"squarePLUS": "<img src='./img/p4.png' class='img-responsive'><span class='sharetxt'>Good gender ratio panels</span>"},
+        {"squarePLUS": "<img src='./img/p5.png' class='img-responsive'><span class='sharetxt'>Uninterrupted female monologue</span>"},
+        {"squarePLUS":  "<img src='./img/p6.png' class='img-responsive'><span class='sharetxt'>Zero all-male panels</span>"}, 
+        {"squarePLUS":  "<img src='./img/p7.png' class='img-responsive'><span class='sharetxt'>Women are called women</span>"}, 
+        {"squarePLUS":  "<img src='./img/p8.png' class='img-responsive'><span class='sharetxt'>Reference to a woman's achievements</span>"}, 
+        {"squarePLUS":  "<img src='./img/p9.png' class='img-responsive'><span class='sharetxt'>Racially diverse panels</span>"}, 
+        {"squarePLUS":  "<img src='./img/p10.png' class='img-responsive'><span class='sharetxt'>Gender balanced awards</span>"}, 
+        {"squarePLUS":  "<img src='./img/p11.png' class='img-responsive'><span class='sharetxt'>Questions taken from women</span>"}, 
+        {"squarePLUS":  "<img src='./img/p12.png' class='img-responsive'><span class='sharetxt'>No straying eyes</span>"}, 
+        {"squarePLUS":  "<img src='./img/p13.png' class='img-responsive'><span class='sharetxt'>Inclusion</span>"}, 
+        {"squarePLUS":  "<img src='./img/p14.png' class='img-responsive'><span class='sharetxt'>No racial assumptions</span>"}, 
+        {"squarePLUS":  "<img src='./img/p15.png' class='img-responsive'><span class='sharetxt'>Woman's comment respected</span>"}, 
+        {"squarePLUS":  "<img src='./img/p16.png' class='img-responsive'><span class='sharetxt'>Engaging on a woman's achievements</span>"}, 
+        {"squarePLUS":  "<img src='./img/p17.png' class='img-responsive'><span class='sharetxt'>Positive networking experience</span>"}, 
+        {"squarePLUS":  "<img src='./img/p18.png' class='img-responsive'><span class='sharetxt'>No unsolicited touching</span>"}, 
+        {"squarePLUS":  "<img src='./img/p19.png' class='img-responsive'><span class='sharetxt'>Safe environment</span>"}, 
+        {"squarePLUS":  "<img src='./img/p20.png' class='img-responsive'><span class='sharetxt'>Woman invited to collaborate</span>"}, 
+        {"squarePLUS":  "<img src='./img/p21.png' class='img-responsive'><span class='sharetxt'>Women's leadership celebrated</span>"}, 
+        {"squarePLUS":  "<img src='./img/p22.png' class='img-responsive'><span class='sharetxt'>Women's professional expertise sought</span>"}, 
+        {"squarePLUS":  "<img src='./img/p23.png' class='img-responsive'><span class='sharetxt'>Female keynote speakers</span>"}, 
+        {"squarePLUS":  "<img src='./img/p24.png' class='img-responsive'><span class='sharetxt'>No sexual harassment</span>"},
+        {"squarePLUS":  "<img src='./img/p25.png' class='img-responsive'><span class='sharetxt'>Sexual orientation not alluded to</span>"}
     ]    
     };
+    
+    
+// var JSONBingoPLUS = {"squaresPLUS": [
+//         {"squarePLUS": "Neutral pronouns"},
+//         {"squarePLUS": "Moderator treats panelists equally"},
+//         {"squarePLUS": "Female professional titles used"},
+//         
+//         {"squarePLUS": "Good gender ratio panels"},
+//         {"squarePLUS": "Uninterrupted female monologue"},
+//         {"squarePLUS": "Zero all-male panels"},
+//         {"squarePLUS": "Women are called women"},
+//         {"squarePLUS": "Reference to a woman's achievements"},
+//         
+//  {"squarePLUS": "Racially diverse panels"},
+//  {"squarePLUS": "Gender balanced awards"},
+//  {"squarePLUS": "Questions taken from women"},
+//  {"squarePLUS": "No straying eyes"},
+//  {"squarePLUS": "Inclusion"},
+//  {"squarePLUS": "No racial assumptions"},
+//  {"squarePLUS": "Woman's comment respected"},
+//  {"squarePLUS": "Engaging on a woman's achievements"},
+//  {"squarePLUS": "Positive networking experience"},
+//  {"squarePLUS": "No unsolicited touching"},
+//  {"squarePLUS": "Safe environment"},
+//  {"squarePLUS": "Woman invited to collaborate"},
+//  {"squarePLUS": "Women's leadership celebrated"},
+//  {"squarePLUS": "Women's professional expertise sought"},
+//  {"squarePLUS": "Female keynote speakers"},
+//  {"squarePLUS": "No sexual harassment"},
+//  {"squarePLUS": "Sexual orientation not alluded to"}
+//     ]    
+//     };    

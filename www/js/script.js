@@ -162,7 +162,7 @@ shuffle = function(v){
 
 var LoadTweet = function() {
 var tweet = GetMsg();
-window.plugins.socialsharing.share('I\'m at '+hashtag+' playing '+headerText+'. Ticking the box for \''+ tweet+'\'', headerText, 'http://women4oceans.weebly.com/uploads/1/2/1/3/12139956/website1_orig.png', 'http://www.women4oceans.weebly.com')
+window.plugins.socialsharing.share('I\'m at '+hashtag+' playing '+headerText+'. Ticking the box for \''+ tweet+'\'', headerText, pix, 'http://www.women4oceans.weebly.com')
 }
 
 var GetMsg = function() {
