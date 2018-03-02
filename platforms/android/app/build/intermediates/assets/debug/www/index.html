@@ -20,8 +20,7 @@
 </script>
 
 		<link rel="stylesheet" href="css/bootstrap.min.css"> 
-<!-- 		<link href="src: url('fonts/Nanum.woff2') format('woff2')" rel="stylesheet">  -->
-<link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 		<link href="css/style.css" rel="stylesheet" type="text/css"> 
 
 		<script src="js/jquery-3.3.1.min.js" type="text/javascript">
@@ -33,6 +32,8 @@
 		</script>
 		<script type="text/javascript" src="cordova.js">
 		</script>
+		<script type="text/javascript" src="js/bootbox.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
 
      
 	</head>
@@ -59,23 +60,30 @@
 		
 
 				</div>	
+
+	
+				
+				
 	<script>
 		
 		
 		
 		 $('body').on('click', '.square', function(e) 
 		 {
-		            msg = document.getElementById(e.target.id).getElementsByClassName('text')[0].innerHTML;
+		            msg = document.getElementById(e.target.id).getElementsByClassName('sharetxt')[0].innerHTML;
+                    pix = document.getElementById(e.target.id).getElementsByClassName('img-responsive')[0].src;
+		        
 		           
-				            console.log('here:'+msg);
+				             console.log(msg+' '+pix);
 		            
 		            
 		});
 				 $('body').on('click', '.squarePLUS', function(e) 
 		 {
-		            msg = document.getElementById(e.target.id).getElementsByClassName('text')[0].innerHTML;
+		            msg = document.getElementById(e.target.id).getElementsByClassName('sharetxt')[0].innerHTML;
+                    pix = document.getElementById(e.target.id).getElementsByClassName('img-responsive')[0].src;		            
 		      
-				            console.log('herePLUS:'+msg);
+				            console.log(pix+''+msg);
 		            
 		            
 		});

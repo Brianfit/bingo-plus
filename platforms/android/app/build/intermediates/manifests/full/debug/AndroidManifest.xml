@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.brianfitzgerald.bingo"
     android:hardwareAccelerated="true"
-    android:versionCode="10007"
-    android:versionName="1.0.7" >
+    android:versionCode="10102"
+    android:versionName="1.1.2" >
 
     <uses-sdk
         android:minSdkVersion="16"

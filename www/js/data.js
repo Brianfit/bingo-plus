@@ -1,12 +1,10 @@
-// NB: HeaderText is used as a variable in LoadTWeet()
-var headerText = "Gender Balance This Oceans Conference Bingo";
-var headerImage = "<img src='img/banner.jpg' class='img-responsive'>";
-
-var footerText = "A beautiful mischief app from <br /><a href='http://women4oceans.weebly.com/'><img src='img/logo.png' width='25px' height='25px'>Women4oceans</a> and <a href='http://www.dancing-fox.com'><img src='img/df-logo.png' width='25px' height='25px'> Dancing Fox</a>";
+// NB: HeaderText is used as a variable in LoadTWeet() to reference the name of the game being played
+var headerText = "#TimesUp Bingo";
+var headerImage = "<img src='img/banner.jpg' class='img-responsive' style='margin: 0 auto'>";
 
 var winText =  "<img src='img/wins.jpg' class='img-responsive'>";
 
-var BottomMenu ="<div class='footer'><div class='row'><div class='col-xs-3 text-center'><button type='button' class='btn btn-info' onclick='HashTagLoad()'>Hashtag</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info' onclick='window.location.reload(true);'>New Cards</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info' onclick='FlipBoard()'>Flip Board</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info' onclick='LoadTweet()'>Share move</button></div></div></div><div class='row'><div class='col-xs-12 text-center'><p style='color:white'><a href=''> About Us </a> <a href='http://women4oceans.weebly.com/'> <img src='img/logo.png' height='50px' width='50px'> </a> <a href='https://donorbox.org/women4oceans'> Give Back </a></p></div><div></div></div>";
+var BottomMenu ="<div class='footer'><div class='row'><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='HashTagLoad()'>Set Hashtag</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='window.location.reload(true);'>New Cards</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='FlipBoard()'>Flip Board</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='LoadTweet()'>Share move</button></div></div><div class='row'><div class='col-xs-12 text-center'><p class='w4o' style='color:black'><a href='http://dancing-fox.com/bingo'> About Us </a> <a href='http://women4oceans.weebly.com/'> <img src='img/logo.png' height='50px' width='50px'> </a> <a href='https://donorbox.org/women4oceans'> Give Back </a></p></div><div></div>";
 
 var loseText =  "<img src='img/lose.jpg' class='img-responsive'>";
 
@@ -16,7 +14,7 @@ var winSnd = new Audio("audio/win.mp3");
 
 var loseSnd = new Audio("audio/lose.mp3");
 
-var hashtag = "#OceansConference";
+var hashtag = "#OceansSummit";
 
 var idstring = "sq11";
 
@@ -27,7 +25,7 @@ var losesoundoff = false;
 
 // var idstring = "sqp11";
 
-var msg = "I'm playing Gender Equality Conference Bingo"
+var msg = "I'm playing #TimesUp Bingo"
 
 // var JSONBingo = {"squares": [
 //         {"square": "All male panel (manel)"},
@@ -61,9 +59,9 @@ var msg = "I'm playing Gender Equality Conference Bingo"
 
 var JSONBingo = {"squares": [
         {"square": "<img src='./img/n1.png' class='img-responsive'><span class='sharetxt'>All male panel (manel)</span>"},
-        {"square": "<img src='./img/n2.png'  class='img-responsive'><span class='sharetxt'>Man-splained to</span>"},
+        {"square": "<img src='./img/n2.png'  class='img-responsive'><span class='sharetxt'>Mansplaining</span>"},
         {"square": "<img src='./img/n3.png' class='img-responsive'><span class='sharetxt'>Woman interrupted</span>"},
-        {"square": "<img src='./img/n4.png' class='img-responsive'><span class='sharetxt'>FisherMEN</span>"},
+        {"square": "<img src='./img/n4.png' class='img-responsive'><span class='sharetxt'>'Feminist' as pejorative</span>"},
         {"square": "<img src='./img/n5.png' class='img-responsive'><span class='sharetxt'>Ogling</span>"},
         {"square":  "<img src='./img/n6.png' class='img-responsive'><span class='sharetxt'>We tried to find a woman but...</span>"}, 
         {"square":  "<img src='./img/n7.png' class='img-responsive'><span class='sharetxt'>Women ignored</span>"}, 
@@ -74,7 +72,7 @@ var JSONBingo = {"squares": [
         {"square":  "<img src='./img/n12.png' class='img-responsive'><span class='sharetxt'>No racial diversity</span>"}, 
         {"square":  "<img src='./img/n13.png' class='img-responsive'><span class='sharetxt'>Woman objectified</span>"}, 
         {"square":  "<img src='./img/n14.png' class='img-responsive'><span class='sharetxt'>Inappropriate touching</span>"}, 
-        {"square":  "<img src='./img/n15.png' class='img-responsive'><span class='sharetxt'>Presumption of maleness</span>"}, 
+        {"square":  "<img src='./img/n15.png' class='img-responsive'><span class='sharetxt'>Presuming maleness</span>"}, 
         {"square":  "<img src='./img/n16.png' class='img-responsive'><span class='sharetxt'>Panel overwhelmingly male</span>"}, 
         {"square":  "<img src='./img/n17.png' class='img-responsive'><span class='sharetxt'>Women referred to as girl</span>"}, 
         {"square":  "<img src='./img/n18.png' class='img-responsive'><span class='sharetxt'>Reference to a woman's appearance</span>"}, 
@@ -84,7 +82,7 @@ var JSONBingo = {"squares": [
         {"square":  "<img src='./img/n22.png' class='img-responsive'><span class='sharetxt'>Asked about relationship status</span>"}, 
         {"square":  "<img src='./img/n23.png' class='img-responsive'><span class='sharetxt'>But what about men...</span>"}, 
         {"square":  "<img src='./img/n24.png' class='img-responsive'><span class='sharetxt'>Dismissive behavior</span>"},
-        {"square":  "<img src='./img/n25.png' class='img-responsive'><span class='sharetxt'>Woman's professional title dropped </span>"}
+        {"square":  "<img src='./img/n25.png' class='img-responsive'><span class='sharetxt'>Woman's title dropped </span>"}
     ]
     };
     

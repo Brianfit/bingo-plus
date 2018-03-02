@@ -1,12 +1,4 @@
-// To test:
-//Pink board not adding correctly valueplus????
 
-
-// To Do:
-// Add tiles to social media
-// Consider making board of image tiles instead of text
-// Build About page
-// Figure out why pink screen diagonal doesn't calculate
 
 
 $(document).ready(function() {
@@ -21,12 +13,12 @@ $(document).ready(function() {
 	$('#header').append(headerImage);
 
 	
-	$('#footer').append(footerText);
+// 	$('#footer').append(footerText);
 	shuffle(JSONBingo.squares);
 	
 	for (i=0; i<24; i++)	{
 		if (i==12) {
-			$('#board').append("<div data-value='1' class='selected freesquare align-top' id='sqfree'><p class='align-top text'>free space</p></div>");
+			$('#board').append("<div data-value='1' class='selected freesquare align-top' id='sqfree'><p class='align-top text'><img src='./img/FreeSpace.png' class='img-responsive'></img></p></div>");
 			$('#board').append("<div data-value='0' class='square align-top' id='sq12'><p class='align-top text'>"+JSONBingo.squares[i].square+"</p></div>");
 		} else {
 			$('#board').append("<div data-value='0' class='square align-top' id='sq"+i+"'><p class='align-top text'>"+JSONBingo.squares[i].square+"</p></div>");
@@ -42,7 +34,7 @@ shuffle(JSONBingoPLUS.squaresPLUS);
 for (i=0; i<24; i++)	{
 	
 		if (i==12) {
-			$('#positiveboard').append("<div data-valueplus='1' class='selected freesquarePLUS align-top' id='sqfreePLUS'><p class='align-top text'><br/>free space</p></div>");
+			$('#positiveboard').append("<div data-valueplus='1' class='selected freesquarePLUS align-top' id='sqfreePLUS'><p class='align-top text'><br/><img src='./img/FreeSpace.png' class='img-responsive'></img></p></div>");
 			$('#positiveboard').append("<div data-valueplus='0' class='squarePLUS align-top' id='sqp12'><p class='align-top text'>"+JSONBingoPLUS.squaresPLUS[i].squarePLUS+"</p></div>");
 		} else {
 			$('#positiveboard').append("<div data-valueplus='0' class='squarePLUS align-top' id='sqp"+i+"'><p class='align-top text'>"+JSONBingoPLUS.squaresPLUS[i].squarePLUS+"</p></div>");
@@ -89,12 +81,14 @@ $('#positiveboard').append(BottomMenu);
 		var diag2 = ($('#sq4').data('value')+$('#sq8').data('value')+$('#sqfree').data('value')+$('#sq15').data('value')+$('#sq19').data('value'));	
 		
 		if (row1 == 5 || row2 == 5 || row3 == 5 || row4 == 5 || row5 == 5 || col1 == 5 || col2 == 5 || col3 == 5  || col4 == 5  || col5 == 5 || diag1 == 5 || diag2 == 5) {
-			$('#header').html(loseText);
-			$('#header').addClass("lose");
+// 			$('#header').html(loseText);
+// 			$('#header').addClass("lose");
+
 	
          	if (losesoundoff == false) {loseSnd.play();
+         	bootbox.alert("<img src='./img/lose.jpg'></img>"); 
          	losesoundoff = true;}
-    		
+   		
     	} else {
 			$('#header').html(headerImage);
 			$('#header').removeClass("lose");
@@ -139,15 +133,19 @@ $('#positiveboard').append(BottomMenu);
 		var diag2 = ($('#sqp4').data('valueplus')+$('#sqp8').data('valueplus')+$('#sqfreePLUS').data('valueplus')+$('#sqp15').data('valueplus')+$('#sqp19').data('valueplus'));	
 		
 		if (row1 == 5 || row2 == 5 || row3 == 5 || row4 == 5 || row5 == 5 || col1 == 5 || col2 == 5 || col3 == 5  || col4 == 5  || col5 == 5 || diag1 == 5 || diag2 == 5) {
-			$('#header').html(winText);
-			$('#header').addClass("win");
+// 			$('#header').html(winText);
+// 			$('#header').addClass("win");
+
 	
          	if (winsoundoff == false){ winSnd.play();
+			bootbox.alert("<img src='./img/win.jpg'></img>");          	
          	winsoundoff = true;}
+        	
     		
     	} else {
 			$('#header').html(headerImage);
 			$('#header').removeClass("win");
+
 
 		}; 
     });
@@ -162,7 +160,7 @@ shuffle = function(v){
 
 var LoadTweet = function() {
 var tweet = GetMsg();
-window.plugins.socialsharing.share('I\'m at '+hashtag+' playing '+headerText+'. Ticking the box for \''+ tweet+'\'', headerText, 'http://women4oceans.weebly.com/uploads/1/2/1/3/12139956/website1_orig.png', 'http://www.women4oceans.weebly.com')
+window.plugins.socialsharing.share('I\'m at '+hashtag+' playing '+headerText+' by #Women4Oceans. Ticking the box for \''+ tweet+'\'', headerText, pix, 'http://www.women4oceans.weebly.com')
 }
 
 var GetMsg = function() {
@@ -182,7 +180,7 @@ navigator.notification.prompt(
     onPrompt,                  // callback to invoke
     'Hashtag Setup',            // title
     ['Ok','Exit'],             // buttonLabels
-    '#OceanConference'                 // defaultText
+    '#OceanSummit'                 // defaultText
 )  
   };
   
@@ -196,6 +194,10 @@ location.href = "https://donorbox.org/women4oceans";
 
 }
 
+
+
+
+
 var onLoad = function() {
     document.addEventListener("deviceready", onDeviceReady, false);
 }
@@ -208,6 +210,8 @@ var onDeviceReady = function() {
 		    StatusBar.overlaysWebView(true);
 		    StatusBar.styleDefault();
 		}
+		
+		
  
 
 
@@ -245,3 +249,5 @@ var onDeviceReady = function() {
 		} );
 	}
 })( this );
+
+
