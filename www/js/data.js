@@ -1,5 +1,5 @@
 // NB: HeaderText is used as a variable in LoadTWeet() to reference the name of the game being played
-var headerText = "#TimesUp Bingo";
+var headerText = "Gender Balance Bingo";
 var headerImage = "<img src='img/banner.jpg' class='img-responsive' style='margin: 0 auto'>";
 
 var winText =  "<img src='img/wins.jpg' class='img-responsive'>";
@@ -25,7 +25,7 @@ var losesoundoff = false;
 
 // var idstring = "sqp11";
 
-var msg = "I'm playing #TimesUp Bingo"
+var msg = "I'm playing #GenderBalance Bingo"
 
 // var JSONBingo = {"squares": [
 //         {"square": "All male panel (manel)"},
