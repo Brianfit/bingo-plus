@@ -9,11 +9,13 @@ $(document).ready(function() {
 	
 	$('body').on('touchmove', false);
 	
-// 	$('#header').append(headerText);
+// 	$('#header').append(gameNameText);
 	$('#header').append(headerImage);
 
 	
 // 	$('#footer').append(footerText);
+
+// .squares is the negative (blue) board
 	shuffle(JSONBingo.squares);
 	
 	for (i=0; i<24; i++)	{
@@ -28,7 +30,8 @@ $(document).ready(function() {
   }
 
 $('#board').append(BottomMenu);
-  
+
+//.squaresPLUS is the positive (yellow) board  
 shuffle(JSONBingoPLUS.squaresPLUS);  
 
 for (i=0; i<24; i++)	{
@@ -160,11 +163,11 @@ shuffle = function(v){
 
 var LoadTweet = function() {
 var tweet = GetMsg();
-window.plugins.socialsharing.share('I\'m at '+hashtag+' playing '+headerText+' by #Women4Oceans. Ticking the box for \''+ tweet+'\'', headerText, pix, 'http://www.women4oceans.weebly.com')
+window.plugins.socialsharing.share('I\'m at '+hashtag+' playing '+gameNameText+' by '+authorText+'. Ticking the box for \''+tweet+'\' '+gameHashTag+' ',gameNameText, pix, shareLink);
 }
 
 var GetMsg = function() {
-console.log('GetMsg '+msg);
+// console.log('GetMsg '+msg);
     return msg;
   };
   
@@ -190,7 +193,7 @@ document.querySelector("#boardRow").classList.toggle("flip");
 }  
 
 var GiveBack = function(){
-location.href = "https://donorbox.org/women4oceans";
+location.href = donateLink;
 
 }
 

@@ -1,7 +1,9 @@
-#TimesUp Bingo
-A Cordova fork of J. Hobbs HTML-5 Bingo
-By Brian Fitzgerald
+#Gender Balance Bingo
+
 ---
+A Cordova fork of [J. Hobbs HTML-5 Bingo](https://github.com/jeffehobbs/HTML5-bingo)
+By Brian Fitzgerald
+
 
 WHAT IT IS:
 
@@ -21,10 +23,16 @@ WHAT IT IS:
 
 HOW TO USE:
 
-All data is kept in the "data.js" file. Customize the .json in the data.js file to change the board to your own tiles, 
+All the data you want to change to customise is kept in the "data.js" file. The tile images, logo, and top banner files are in www/img. Customize the .json in the data.js file to change the board to your own tiles, 
 change the default hashtag, and change the branding and title images.
+
+Compiled Examples:
+ios version: https://itunes.apple.com/us/app/timesup-bingo/id1350243074?ls=1&mt=8
+android version: https://play.google.com/store/apps/details?id=net.brianfitzgerald.bingo
 
 NB:
 You can test much of the functionality and layout in a desktop browser, but be aware the "Set Hashtag" and "Share Move" buttons 
 only work in a Cordova-compiled environment. Best to compile the code as an iOS or Android app and test these functions on a 
 live device or emulator. 
+
+

@@ -1,12 +1,20 @@
-// NB: HeaderText is used as a variable in LoadTWeet() to reference the name of the game being played
-var headerText = "Gender Balance Bingo";
+// NB: gameNameText is used as a variable in LoadTWeet() to reference the name of the game being played
+var gameNameText = "Gender Balance Bingo";
+//The top banner 
 var headerImage = "<img src='img/banner.jpg' class='img-responsive' style='margin: 0 auto'>";
 
 var winText =  "<img src='img/wins.jpg' class='img-responsive'>";
 
+//This is where the logo, about us, and donate links live
 var BottomMenu ="<div class='footer'><div class='row'><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='HashTagLoad()'>Set Hashtag</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='window.location.reload(true);'>New Cards</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='FlipBoard()'>Flip Board</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='LoadTweet()'>Share move</button></div></div><div class='row'><div class='col-xs-12 text-center'><p class='w4o' style='color:black'><a href='http://dancing-fox.com/bingo'> About Us </a> <a href='http://women4oceans.weebly.com/'> <img src='img/logo.png' height='50px' width='50px'> </a> <a href='https://donorbox.org/women4oceans'> Give Back </a></p></div><div></div>";
 
 var loseText =  "<img src='img/lose.jpg' class='img-responsive'>";
+
+var authorText = "#Women4Oceans";
+
+var gameHashTag = "#W4OBingo";
+
+var shareLink = "http://www.women4oceans.weebly.com";
 
 var clickSnd = new Audio("audio/click.mp3");
 
@@ -15,6 +23,8 @@ var winSnd = new Audio("audio/win.mp3");
 var loseSnd = new Audio("audio/lose.mp3");
 
 var hashtag = "#OceansSummit";
+
+var donateLink = "https://donorbox.org/women4oceans";
 
 var idstring = "sq11";
 
@@ -25,36 +35,9 @@ var losesoundoff = false;
 
 // var idstring = "sqp11";
 
-var msg = "I'm playing #GenderBalance Bingo"
+//Default fallback in case, you know, dragons...
+var msg = "I'm playing #GenderBalance Bingo";
 
-// var JSONBingo = {"squares": [
-//         {"square": "All male panel (manel)"},
-//         {"square": "Man-splained to"},
-//         {"square": "Woman interrupted"},
-//         {"square": "FisherMEN"},
-//         {"square": "Ogling"},
-//         {"square": "We tried to find a woman but..."},
-//         {"square": "Women ignored"},
-//         {"square": "Condescension"},
-//         {"square": "'She's smart and beautiful'"},
-//         {"square": "Leering"},
-//         {"square": "Racial assumptions"},
-//         {"square": "No racial diversity"},
-//         {"square": "Woman objectified"},
-//         {"square": "Inappropriate touching"},
-//         {"square": "Presumption of maleness"},
-//         {"square": "Panel overwhelmingly male"},
-//         {"square": "Women referred to as girl"},
-//         {"square": "Reference to a woman's appearance"},
-//         {"square": "Male dominated discussion"},
-//         {"square": "Pet name e.g. Sweetheart"},
-//         {"square": "Accused of being un-lady like"},
-//         {"square": "Asked about relationship status"},
-//         {"square": "But what about men..."},
-//         {"square": "Dismissive behavior"},
-//         {"square": "Woman's professional title dropped"}  	
-//     ]
-//     };
 
 
 var JSONBingo = {"squares": [
@@ -116,6 +99,38 @@ var JSONBingoPLUS = {"squaresPLUS": [
     };
     
     
+// The original version of this app used text instead of images. You can revert to that if you like, but font size
+// and hyphenation management across a range of device sizes made me tear my hair out. YMMV. 
+
+// var JSONBingo = {"squares": [
+//         {"square": "All male panel (manel)"},
+//         {"square": "Man-splained to"},
+//         {"square": "Woman interrupted"},
+//         {"square": "FisherMEN"},
+//         {"square": "Ogling"},
+//         {"square": "We tried to find a woman but..."},
+//         {"square": "Women ignored"},
+//         {"square": "Condescension"},
+//         {"square": "'She's smart and beautiful'"},
+//         {"square": "Leering"},
+//         {"square": "Racial assumptions"},
+//         {"square": "No racial diversity"},
+//         {"square": "Woman objectified"},
+//         {"square": "Inappropriate touching"},
+//         {"square": "Presumption of maleness"},
+//         {"square": "Panel overwhelmingly male"},
+//         {"square": "Women referred to as girl"},
+//         {"square": "Reference to a woman's appearance"},
+//         {"square": "Male dominated discussion"},
+//         {"square": "Pet name e.g. Sweetheart"},
+//         {"square": "Accused of being un-lady like"},
+//         {"square": "Asked about relationship status"},
+//         {"square": "But what about men..."},
+//         {"square": "Dismissive behavior"},
+//         {"square": "Woman's professional title dropped"}  	
+//     ]
+//     };    
+    
 // var JSONBingoPLUS = {"squaresPLUS": [
 //         {"squarePLUS": "Neutral pronouns"},
 //         {"squarePLUS": "Moderator treats panelists equally"},
@@ -146,3 +161,5 @@ var JSONBingoPLUS = {"squaresPLUS": [
 //  {"squarePLUS": "Sexual orientation not alluded to"}
 //     ]    
 //     };    
+
+
