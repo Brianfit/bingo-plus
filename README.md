@@ -1,4 +1,4 @@
-#Gender Balance Bingo
+# Gender Balance Bingo
 
 ---
 A Cordova fork of [J. Hobbs HTML-5 Bingo](https://github.com/jeffehobbs/HTML5-bingo)
@@ -34,5 +34,10 @@ NB:
 You can test much of the functionality and layout in a desktop browser, but be aware the "Set Hashtag" and "Share Move" buttons 
 only work in a Cordova-compiled environment. Best to compile the code as an iOS or Android app and test these functions on a 
 live device or emulator. 
+
+![Screenshot 1](https://github.com/Brianfit/bingo-plus/blob/master/screenshots/1.png?raw=true)
+![Screenshot 2](https://github.com/Brianfit/bingo-plus/blob/master/screenshots/2.png?raw=true)
+![Screenshot 3](https://github.com/Brianfit/bingo-plus/blob/master/screenshots/3.png?raw=true)
+![Screenshot 4](https://github.com/Brianfit/bingo-plus/blob/master/screenshots/1.png?raw=true)
 
 
