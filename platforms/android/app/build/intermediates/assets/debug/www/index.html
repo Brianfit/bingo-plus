@@ -34,10 +34,10 @@
 		</script>
 		<script type="text/javascript" src="js/bootbox.min.js"></script>
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/clipboard.min.js"></script>		
 
      
 	</head>
-	<body onload="onLoad()">
 		<div id="main" class="container align-middle">
 			<div class="row">
 				<div class="col-md-12">
@@ -56,37 +56,77 @@
 						</div>
 					</div>
 				</div>
+
 			</div>
-		
-
-				</div>	
-
-	
-				
+				</div>					
 				
 	<script>
 		
+
+
+    var clipboard = new ClipboardJS('#TweetClick');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+
 		
 		
 		 $('body').on('click', '.square', function(e) 
 		 {
 		            msg = document.getElementById(e.target.id).getElementsByClassName('sharetxt')[0].innerHTML;
                     pix = document.getElementById(e.target.id).getElementsByClassName('img-responsive')[0].src;
-		        
-		           
-				             console.log(msg+' '+pix);
+		            var insertpoint = pix.indexOf("img");
+                    pix = pix.substr(0, insertpoint+4)+'share'+pix.substr(insertpoint+4);	
+		            var slicepoint = pix.indexOf("www");
+		            pix = pix.substr(slicepoint);
+				    console.log(msg+' '+pix);
 		            
 		            
 		});
+		
+		
+		$('body').on('click', '.TweetIt', function(e) 
+	{		      
+		  TweetIt();   
+		  console.log('tweet tweet')       
+	});
+		
+		$('body').on('click', '.FacebookIt', function(e) 
+	{		            
+		  FacebookIt();   
+		  console.log('fb')       
+	});
+		$('body').on('click', '.InstaIt', function(e) 
+	{		            
+		  InstaIt();   
+		  console.log('Insta')       
+	});
+		$('body').on('click', '.ShareIt', function(e) 
+	{		            
+		  ShareIt();   
+		  console.log('share')       
+	});			
+
+			
+		
+		
+		
 				 $('body').on('click', '.squarePLUS', function(e) 
 		 {
 		            msg = document.getElementById(e.target.id).getElementsByClassName('sharetxt')[0].innerHTML;
                     pix = document.getElementById(e.target.id).getElementsByClassName('img-responsive')[0].src;		            
-		      
-				            console.log(pix+''+msg);
+		            var insertpoint = pix.indexOf("img");
+                    pix = pix.substr(0, insertpoint+4)+'share'+pix.substr(insertpoint+4);	
+                    var slicepoint = pix.indexOf("www");
+		            pix = pix.substr(slicepoint);			            
+                    console.log(pix+''+msg);
 		            
 		            
 		});
+	
 	</script>
 </body>
 </html>

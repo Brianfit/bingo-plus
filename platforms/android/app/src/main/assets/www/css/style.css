@@ -27,6 +27,7 @@ body {
 img {
     max-width: 100%;
     min-height: 100%;
+
     padding: 1px 1px 1px 1px;
     }
 
@@ -329,6 +330,11 @@ and (max-device-width : 480px) {
 
 }
 
+.bootbox-close-button{
+font-size:xx-large;
+color: darkred;
+font-style:bold;}
+
 
 .flip-container, .front, .back {
 	width: #board.css(width);
@@ -377,5 +383,30 @@ and (max-device-width : 480px) {
          transform: rotateY(-180deg);
 }
 
+.sm-icons {
+  width: 20vw;
+  height: 20vw;
+  }
+td {
+width: 20vw;
+height: 20vw;
+margin: 10px 10px 10px 10px;
+}
+
+ol {
+text-align: left;
+margin-left: 10px;
+}
+
+table {
+    margin: 0 auto; /* or margin: 0 auto 0 auto */
+ /*    max-height: calc(100vh - 225px */);
+  }
 
 .modal-footer {display: none;}
+
+
+.modal-body{ margin: 0 auto;
+text-align: center;
+/* max-height: calc(100vh - 225px); */}
+

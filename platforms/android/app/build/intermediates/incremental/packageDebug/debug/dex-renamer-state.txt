@@ -1,4 +1,4 @@
-#Tue Mar 06 20:47:28 IST 2018
+#Mon Apr 02 10:35:59 CEST 2018
 base.0=/Users/gpiuser/Sites/Women4Oceans/net.brian-fitzgerald.bingo/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
 renamed.0=classes.dex
-file.0=/Users/gpiuser/Sites/Women4Oceans/net.brian-fitzgerald.bingo/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0/classes.dex
