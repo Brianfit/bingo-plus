@@ -6,7 +6,7 @@ var headerImage = "<img src='img/banner.jpg' class='img-responsive' style='margi
 var winText =  "<img src='img/wins.jpg' class='img-responsive'>";
 
 //This is where the logo, about us, and donate links live
-var BottomMenu ="<div class='footer'><div class='row'><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='HashTagLoad()'>Set Hashtag</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='window.location.reload(true);'>New Cards</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='FlipBoard()'>Flip Board</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='LoadTweet()'>Share move</button></div></div><div class='row'><div class='col-xs-12 text-center'><p class='w4o' style='color:black'><a href='http://dancing-fox.com/bingo'> About Us </a> <a href='http://women4oceans.weebly.com/'> <img src='img/logo.png' height='50px' width='50px'> </a> <a href='https://donorbox.org/women4oceans'> Give Back </a></p></div><div></div>";
+var BottomMenu ="<div class='footer'><div class='row'><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='HashTagLoad()'>Set Hashtag</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='window.location.reload(true);'>New Cards</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='FlipBoard()'>Flip Board</button></div><div class='col-xs-3 text-center'><button type='button' class='btn btn-info btn-responsive ' onclick='ShareWindow()'>Share move</button></div></div><div class='row'><div class='col-xs-12 text-center'><p class='w4o' style='color:black'><a href='http://dancing-fox.com/bingo'> About Us </a> <a href='http://women4oceans.weebly.com/'> <img src='img/logo.png' height='50px' width='50px'> </a> <a href='https://donorbox.org/women4oceans'> Give Back </a></p></div><div></div>";
 
 var loseText =  "<img src='img/lose.jpg' class='img-responsive'>";
 
@@ -14,7 +14,7 @@ var authorText = "#Women4Oceans";
 
 var gameHashTag = "#W4OBingo";
 
-var shareLink = "http://www.women4oceans.weebly.com";
+var shareLink = "http://women4oceans.weebly.com/gender-balance-bingo.html";
 
 var clickSnd = new Audio("audio/click.mp3");
 
@@ -22,7 +22,7 @@ var winSnd = new Audio("audio/win.mp3");
 
 var loseSnd = new Audio("audio/lose.mp3");
 
-var hashtag = "#OceansSummit";
+var hashtag = "#ThisConference";
 
 var donateLink = "https://donorbox.org/women4oceans";
 

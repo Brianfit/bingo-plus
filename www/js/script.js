@@ -1,11 +1,9 @@
-
-
-
 $(document).ready(function() {
  
  console.log('DOCUMENT READY!')
  winsoundoff = false;
  losesoundoff = false;
+ HelpWindow();
 	
 	$('body').on('touchmove', false);
 	
@@ -161,10 +159,39 @@ shuffle = function(v){
     	return v;
 };
 
+var instaShare = function() {
+        window.plugins.socialsharing.canShareVia('instagram', 'msg', null, null, null, function(e){alert(e)}, function(e){alert(e)})
+		 		   LoadTweet();	            
+				    console.log(pix+''+msg);
+		window.plugins.socialsharing.shareViaInstagram(msg, pix);
+		
+}
+
 var LoadTweet = function() {
 var tweet = GetMsg();
 window.plugins.socialsharing.share('I\'m at '+hashtag+' playing '+gameNameText+' by '+authorText+'. Ticking the box for \''+tweet+'\' '+gameHashTag+' ',gameNameText, pix, shareLink);
 }
+
+
+
+var ShareWindow = function() {
+var tweet = GetMsg();
+console.log('Tweet is: '+tweet);
+var sharetweet = 'I\'m at '+hashtag+' playing '+gameNameText+' by '+authorText+'. Ticking the box for \''+tweet+'\' '+gameHashTag+' '+shareLink
+bootbox.dialog({
+message:"<table><thead>Sharing is Caring! Share what is happening here at "+hashtag+"</thead><tr><td><a href='javascript:void(0)' class='TweetIt' id='TweetClick' data-clipboard-text=\""+sharetweet+"\"><span id='TweetCopy' style='display:none'>"+tweet+"</span><img src='./img/Twitter.png' class='sm-icons'> </a></td><td><a href='javascript:void(0)' class='FacebookIt'> <img src='./img/Facebook.png' class='sm-icons'> </a></td><td><a href='javascript:void(0)' class='InstaIt'> <img src='./img/Instagram.png' class='sm-icons'> </a></td></tr></table><a href='javascript:void(0)' class='ShareIt'>Or click here to share via WhatsApp, Snapchat, Hootsuite, et al...</a>", 
+ closeButton: true
+})
+};
+
+var HelpWindow = function() {
+var MsgTxt = "<img src='./img/banner.jpg' class='img-responsive'></img><h2>Welcome! Here's how to play</h2><ol><li>Use the \"Set Hashtag\" button to change the default hashtag to the one for the conference or meeting you\'re at.</li><li>Find a friend to play with. Optional, but a nice way to make friends!</li><li>The \"Flip Board\" button will toggle between positive and negative event boards. Press a square to tick off an event.</li><li>Press the \"Share Event\" button to call attention to that event on social media with the event hashtag. First player to get 5 in a row wins. Press \"New Cards\" to clear the board and start a new game.</li><li>Support Women4Oceans, bringing this app to you free!</li></ol>"
+bootbox.dialog({
+ message: MsgTxt,
+ closeButton: true
+})
+};
+
 
 var GetMsg = function() {
 // console.log('GetMsg '+msg);
@@ -197,9 +224,46 @@ location.href = donateLink;
 
 }
 
+var TweetIt = function(){
+var tweet = GetMsg();
+alert("Pssst. There\'s default text in the clipboard you can paste!");
+window.plugins.socialsharing.shareViaTwitter(null, pix, null);
+console.log('sub');
+}
 
+var FacebookIt = function(){
+var tweet = GetMsg();
+window.plugins.socialsharing.shareViaFacebookWithPasteMessageHint('I\'m at '+hashtag+' playing '+gameNameText+' by '+authorText+'. Ticking the box for \''+tweet+'\' '+gameHashTag+' '+gameNameText, pix, null, 'There\'s a default message in the clipboard you can paste. (Facebook won\'t let us do this automatically!)');
+}
 
+var InstaIt = function(){
+window.plugins.socialsharing.shareViaInstagram(null, pix, null, null);
+}
 
+var ShareIt = function(){
+var tweet = GetMsg();
+// this is the complete list of currently supported params you can pass to the plugin (all optional)
+var options = {
+  message: 'I\'m at '+hashtag+' playing '+gameNameText+' by '+authorText+'. Ticking the box for \''+tweet+'\' '+gameHashTag,
+  subject: 'Gender Balance Bingo at '+hashtag, // fi. for email
+  files: [pix], // an array of filenames either locally or remotely
+  url: shareLink,
+  chooserTitle: 'Sharing is Caring' // Android only, you can override the default share sheet title
+}
+
+var onSuccess = function(result) {
+  console.log("Share completed? " + result.completed); // On Android apps mostly return false even while it's true
+  console.log("Shared to app: " + result.app); // On Android result.app is currently empty. On iOS it's empty when sharing is cancelled (result.completed=false)
+}
+
+var onError = function(msg) {
+  console.log("Sharing failed with message: " + msg);
+}
+
+window.plugins.socialsharing.shareWithOptions(options, onSuccess, onError);
+}
+
+   
 
 var onLoad = function() {
     document.addEventListener("deviceready", onDeviceReady, false);

@@ -10,15 +10,17 @@
     "author": "Apache Cordova Team",
     "license": "Apache-2.0",
     "dependencies": {
-        "cordova-android": "^7.0.0",
+        "cordova-android": "^7.1.0",
         "cordova-ios": "^4.5.4",
         "cordova-plugin-dialogs": "^2.0.1",
+        "cordova-plugin-file": "^6.0.1",
         "cordova-plugin-screen-orientation": "^3.0.1",
         "cordova-plugin-splashscreen": "^5.0.2",
         "cordova-plugin-statusbar": "^2.4.1",
         "cordova-plugin-whitelist": "^1.3.3",
         "cordova-plugin-wkwebview-engine": "^1.1.4",
         "cordova-plugin-x-socialsharing": "^5.3.1",
+        "cordova-universal-clipboard": "git+https://github.com/Visigo/CordovaClipboard.git",
         "es6-promise-plugin": "^4.2.2"
     },
     "cordova": {
@@ -33,8 +35,8 @@
             "cordova-plugin-x-socialsharing": {}
         },
         "platforms": [
-            "android",
-            "ios"
+            "ios",
+            "android"
         ]
     }
 }
