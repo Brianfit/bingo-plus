@@ -23,8 +23,8 @@ WHAT IT IS:
 
 HOW TO USE:
 
-All the data you want to change to customise is kept in the "data.js" file. The tile images, logo, and top banner files are in www/img. Customize the .json in the data.js file to change the board to your own tiles, 
-change the default hashtag, and change the branding and title images.
+All the data you want to change to customise is kept in the "data.js" file in www/js. Customize the .json in the data.js file to change the board to your own tiles, 
+title, share text, and change the default hashtag.  Change the branding and title images in www/img.
 
 Compiled Examples:
 ios version: https://itunes.apple.com/us/app/timesup-bingo/id1350243074?ls=1&mt=8
