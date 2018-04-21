@@ -1,5 +1,4 @@
 $(document).ready(function() {
- 
  console.log('DOCUMENT READY!')
  winsoundoff = false;
  losesoundoff = false;
@@ -272,14 +271,25 @@ var onLoad = function() {
 // device APIs are available
 //
 var onDeviceReady = function() {
-            console.log('Ready');
+//             alert('Got here');
+            console.log('Ready Freddy');
+            console.log('Porky: '+cordova.file);
 		    console.log(navigator.notification);
 		    StatusBar.overlaysWebView(true);
 		    StatusBar.styleDefault();
+		    platform = device.platform;
+		    console.log('Yoyo platform: '+platform);
 		}
 		
 		
+// var DeviceDetect = function() {
+// if (platform == 'android' || platform == 'Android' ||
+//                         platform == 'amazon-fireos' ){
+//                         }
+//                         
+//                         }
  
+
 
 
 /*! Normalized address bar hiding for iOS & Android (c) @scottjehl MIT License */

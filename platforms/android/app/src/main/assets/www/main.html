@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>
+			Bingo 
+		</title>
+		<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover' /> 
+
+
+
+
+		<link rel="stylesheet" href="css/bootstrap.min.css"> 
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet" type="text/css"> 
+
+		<script type="text/javascript" src="cordova.js">
+		</script>
+		<script src="js/jquery-3.3.1.min.js" type="text/javascript">
+		</script>
+		<script src="js/jquery.tappable.js" type="text/javascript"></script>
+		<script src="js/data.js" type="text/javascript">
+		</script>
+		<script src="js/script.js" type="text/javascript">
+		</script>
+		<script type="text/javascript" src="js/bootbox.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/clipboard.min.js"></script>	
+		
+
+     </head>
+     <body onload="onLoad()">
+		<div id="main" class="container align-middle">
+			<div class="row">
+				<div class="col-md-12">
+					<div id="header" class="text-center">
+					</div>
+				</div>
+			</div>
+			<div class="row" ">
+				<div class="col-md-12">
+					<div class="flip-container" id="boardRow">
+						<div class="flipper">
+							<div id="board" class="front">
+							</div>
+							<div id="positiveboard" class="back">
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+				</div>					
+				
+	<script>
+		
+
+
+    var clipboard = new ClipboardJS('#TweetClick');
+    clipboard.on('success', function(e) {
+        console.log(e);
+    });
+    clipboard.on('error', function(e) {
+        console.log(e);
+    });
+
+		
+		
+		 $('body').on('click', '.square', function(e) 
+		 {
+		            msg = document.getElementById(e.target.id).getElementsByClassName('sharetxt')[0].innerHTML;
+                    pix = document.getElementById(e.target.id).getElementsByClassName('img-responsive')[0].src;
+		            var insertpoint = pix.indexOf("img");
+                    pix = 'share'+pix.substr(insertpoint+4);
+                    pix = 'http://dancing-fox.com/bingo/img/'+pix;	                  
+				    console.log(msg+' '+pix);
+		            
+		            
+		});
+		
+		
+		$('body').on('click', '.TweetIt', function(e) 
+	{		      
+		  TweetIt();   
+		  console.log('tweet tweet')       
+	});
+		
+		$('body').on('click', '.FacebookIt', function(e) 
+	{		            
+		  FacebookIt();   
+		  console.log('fb')       
+	});
+		$('body').on('click', '.InstaIt', function(e) 
+	{		            
+		  InstaIt();   
+		  console.log('Insta')       
+	});
+		$('body').on('click', '.ShareIt', function(e) 
+	{		            
+		  ShareIt();   
+		  console.log('share')       
+	});			
+
+			
+		
+		
+		
+				 $('body').on('click', '.squarePLUS', function(e) 
+		 {
+		            msg = document.getElementById(e.target.id).getElementsByClassName('sharetxt')[0].innerHTML;
+                    pix = document.getElementById(e.target.id).getElementsByClassName('img-responsive')[0].src;		            		            
+		            var insertpoint = pix.indexOf("img");
+                    pix = 'share'+pix.substr(insertpoint+4);
+                    pix = 'http://dancing-fox.com/bingo/img/'+pix;				            
+                   console.log(pix+''+msg);
+		            
+		            
+		});
+	
+	</script>
+</body>
+</html>

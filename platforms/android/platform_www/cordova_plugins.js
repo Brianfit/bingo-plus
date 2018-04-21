@@ -39,6 +39,14 @@ module.exports = [
     ]
   },
   {
+    "id": "cordova-plugin-x-socialsharing.SocialSharing",
+    "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+    "pluginId": "cordova-plugin-x-socialsharing",
+    "clobbers": [
+      "window.plugins.socialsharing"
+    ]
+  },
+  {
     "id": "cordova-plugin-statusbar.statusbar",
     "file": "plugins/cordova-plugin-statusbar/www/statusbar.js",
     "pluginId": "cordova-plugin-statusbar",
@@ -47,11 +55,11 @@ module.exports = [
     ]
   },
   {
-    "id": "cordova-plugin-x-socialsharing.SocialSharing",
-    "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
-    "pluginId": "cordova-plugin-x-socialsharing",
+    "id": "cordova-plugin-device.device",
+    "file": "plugins/cordova-plugin-device/www/device.js",
+    "pluginId": "cordova-plugin-device",
     "clobbers": [
-      "window.plugins.socialsharing"
+      "device"
     ]
   },
   {
@@ -235,10 +243,11 @@ module.exports.metadata =
   "es6-promise-plugin": "4.2.2",
   "cordova-plugin-screen-orientation": "3.0.1",
   "cordova-plugin-splashscreen": "5.0.2",
-  "cordova-plugin-statusbar": "2.4.1",
   "cordova-plugin-whitelist": "1.3.3",
   "cordova-plugin-wkwebview-engine": "1.1.4",
   "cordova-plugin-x-socialsharing": "5.3.1",
+  "cordova-plugin-statusbar": "2.4.1",
+  "cordova-plugin-device": "2.0.1",
   "cordova-plugin-file": "6.0.1"
 };
 // BOTTOM OF METADATA

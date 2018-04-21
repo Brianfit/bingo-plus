@@ -1,5 +1,4 @@
 $(document).ready(function() {
- 
  console.log('DOCUMENT READY!')
  winsoundoff = false;
  losesoundoff = false;
@@ -233,7 +232,7 @@ console.log('sub');
 
 var FacebookIt = function(){
 var tweet = GetMsg();
-window.plugins.socialsharing.shareViaFacebookWithPasteMessageHint('I\'m at '+hashtag+' playing '+gameNameText+' by '+authorText+'. Ticking the box for \''+tweet+'\' '+gameHashTag+' '+gameNameText, pix, null, 'There\'s a default message in the clipboard you can paste. (Facebook won\'t let us do this automatically!)');
+window.plugins.socialsharing.shareViaFacebookWithPasteMessageHint('I\'m at '+hashtag+' playing '+gameNameText+' by '+authorText+'. Ticking the box for \''+tweet+'\' '+gameHashTag+' ', pix, pix, 'There\'s a default message in the clipboard you can paste. (Facebook won\'t let us do this automatically!)');
 }
 
 var InstaIt = function(){
@@ -272,14 +271,22 @@ var onLoad = function() {
 // device APIs are available
 //
 var onDeviceReady = function() {
-            console.log('Ready');
+//             alert('Got here');
+            console.log('Ready Freddy');
 		    console.log(navigator.notification);
 		    StatusBar.overlaysWebView(true);
 		    StatusBar.styleDefault();
 		}
 		
 		
+// var DeviceDetect = function() {
+// if (platform == 'android' || platform == 'Android' ||
+//                         platform == 'amazon-fireos' ){
+//                         }
+//                         
+//                         }
  
+
 
 
 /*! Normalized address bar hiding for iOS & Android (c) @scottjehl MIT License */

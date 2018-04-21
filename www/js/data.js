@@ -33,9 +33,11 @@ var pix = "blank"
 var winsoundoff = false;
 var losesoundoff = false;
 
-// var idstring = "sqp11";
+//Can't set this until Device Ready. Determines Android OS to adjust file paths
+// var platform = null;
 
-//Default fallback in case, you know, dragons...
+
+//Default fallback in case, you know, dragons... Or user tries to share a blank game
 var msg = "I'm playing #GenderBalance Bingo";
 
 

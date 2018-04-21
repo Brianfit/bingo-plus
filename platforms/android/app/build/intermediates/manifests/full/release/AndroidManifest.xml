@@ -2,12 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.brianfitzgerald.bingo"
     android:hardwareAccelerated="true"
-    android:versionCode="10202"
-    android:versionName="1.2.2" >
+    android:versionCode="10303"
+    android:versionName="1.3.3" >
 
     <uses-sdk
-        android:minSdkVersion="19"
-        android:targetSdkVersion="27" />
+        android:minSdkVersion="16"
+        android:targetSdkVersion="26" />
 
     <supports-screens
         android:anyDensity="true"

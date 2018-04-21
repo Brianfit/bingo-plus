@@ -16,9 +16,6 @@
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
     },
-    "cordova-plugin-statusbar": {
-      "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
-    },
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
     },
@@ -29,6 +26,12 @@
       "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
     },
     "es6-promise-plugin": {
+      "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
+    },
+    "cordova-plugin-device": {
       "PACKAGE_NAME": "net.brian-fitzgerald.bingo"
     }
   },
